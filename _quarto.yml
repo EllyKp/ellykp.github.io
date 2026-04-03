@@ -3,32 +3,29 @@ project:
   output-dir: docs
 
 website:
-  title: "Kundan Kumar"
-  description: "Research Scientist"
-  site-url: https://kundan-kumarr.github.io
+  title: "Elly Kirwa"
+  description: "Graduate Research Assistant - PhD Student"
+  site-url: https://ellykp.github.io
   favicon: misc/info/favicon.png
-  repo-url: https://github.com/kundan-kumarr/kundan-kumarr.github.io
+  repo-url: https://github.com/EllyKp/ellykp.github.io
   repo-actions: [edit, issue]
   page-navigation: true
 
-  page-footer:  
+  page-footer:
     left: >-
-      &#169; 2026 Kundan Kumar &#8729; Made with <a href="https://quarto.org" target="_blank">Quarto</a>
+      &#169; 2026 Elly Kirwa &#8729; Made with <a href="https://quarto.org" target="_blank">Quarto</a>
     center: |
-      <a class="link-dark me-2" href="https://linkedin.com/in/kundan-kumarr" title="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
-      <a class="link-dark me-2" href="https://github.com/kundan-kumarr" title="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
-      <a class="link-dark me-2" href="https://orcid.org/0000-0002-3229-6649" title="ORCID" target="_blank" rel="noopener"><i class="ai ai-orcid"></i></a>
-      <a class="link-dark me-2" href="https://scholar.google.com/citations?user=1zDpIJkAAAAJ" title="Google Scholar" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i></a>
-      <a class="link-dark me-2" href="mailto:cs.kundann@gmail.com" title="Email" target="_blank" rel="noopener"><i class="fas fa-envelope"></i></a>
-    right: 
+      <a class="link-dark me-2" href="https://www.linkedin.com/in/elly-kirwa-04a351123/" title="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+      <a class="link-dark me-2" href="https://github.com/EllyKp" title="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+    right:
       - text: "Contact"
         aria-label: "Contact Form"
         href: contact.qmd
 
-  navbar: 
+  navbar:
     background: "#A9CCE3"
     search: true
-    right: 
+    right:
       - text: ""
         href: "#"
         id: theme-toggle
@@ -46,33 +43,12 @@ website:
         menu:
           - text: "✨ All Projects"
             href: projects.qmd
-          - text: "---"
-          - text: "📚 Notes"
-          - text: "Large Language Models"
-            href: https://kundan-kumarr.github.io/Zero2LLM-Crafter/
-          - text: "Deep & Machine Learning"
-            href: https://kundan-kumarr.github.io/ai-analysis/
-          - text: "Statistical Analysis"
-            href: https://kundan-kumarr.github.io/statsphere/
-          - text: "AI Alignment and Safety"
-            href: https://kundan-kumarr.github.io/safe-AI/
-          - text: "---"
-          - text: "🧰 Resources"
-          - text: "AI for Smart Energy Systems"
-            href: https://kundan-kumarr.github.io/SmartGridAI/
-          - text: "ResearchScientist-Handbook"
-            href: https://kundan-kumarr.github.io/ResearchScientist-Handbook/
-          
       - text: "Teaching"
         icon: mortarboard-fill
         href: teaching/teaching.qmd
       - text: "Blogs"
         icon: pen-fill
         href: blog/index.qmd
-
-  google-analytics:
-    tracking-id: "G-F9QK4C80G"   # ✅ Add your GA4 ID here
-    anonymize-ip: true
 
 format:
   html:

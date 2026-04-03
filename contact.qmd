@@ -13,19 +13,11 @@ email-obfuscation: javascript
 </nav>
 ```
 
-## Visit Us
+## Get In Touch
 
-The Lab is located in **Atanasoff Hall** at the Iowa State University.
+I welcome collaborations in precision livestock analytics, production economics, epidemiology, business analytics, and data-driven decision-support systems.
 
-> **Street Address:** 2434 Osborn Dr , Ames, IA 50011
->
-
-```{=html}
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2963.701280333627!2d-93.65214622434559!3d42.028140256007404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87ee70a50267cdf5%3A0x7cfd0db300984a65!2sAtanasoff%20Hall%2C%202434%20Osborn%20Dr%2C%20Ames%2C%20IA%2050011!5e0!3m2!1sen!2sus!4v1668720305423!5m2!1sen!2sus" width="780" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-```
-
-
-## Email Us
+## Send a Message
 
 ::: {=html}
 
@@ -41,26 +33,25 @@ The Lab is located in **Atanasoff Hall** at the Iowa State University.
 
 <div class="contact-box">
 
-<form class="contact-form" action="https://formsubmit.co/kkumar@iastate.edu" method="POST">
-  <!-- Redirect URL after success (optional) -->
-  <input type="hidden" name="_next" value="https://your‑site.com/thanks.html">
-  <!-- Disable CAPTCHA (optional) -->
+<form class="contact-form" action="https://formsubmit.co/kirwa@iastate.edu" method="POST">
+  <input type="hidden" name="_next" value="https://ellykp.github.io/contact.html">
   <input type="hidden" name="_captcha" value="false">
 
-  <label>Name <span style="color:red">*</span>
+  <label>Name <span style="color:red">*</span>
     <input type="text" name="name" required>
   </label>
 
-  <label>Email <span style="color:red">*</span>
+  <label>Email <span style="color:red">*</span>
     <input type="email" name="email" required>
   </label>
 
   <label>Subject
     <select name="subject">
-      <option value="" disabled selected>— Select a topic —</option>
-      <option>Research</option>
-      <option>Resources</option>
+      <option value="" disabled selected>— Select a topic —</option>
+      <option>Research Collaboration</option>
+      <option>Data Analytics</option>
       <option>Opportunities</option>
+      <option>Other</option>
     </select>
   </label>
 
@@ -74,5 +65,3 @@ The Lab is located in **Atanasoff Hall** at the Iowa State University.
 </div>
 
 :::
-
-
