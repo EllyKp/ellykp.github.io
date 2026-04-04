@@ -1,612 +1,171 @@
 ---
-title: "Curriculum Vitae"
-format: html
+pagetitle: "CV – Elly Kirwa"
 toc: true
-toc-title: On this page
-number-sections: false
-anchor-sections: false
-page-layout: full
+toc-depth: 2
 ---
 
-<table style="width: 100%; margin-bottom: 0.5rem;">
-  <tr>
-    <td><strong></strong></td>
-    <td style="text-align: right;">
-      <a href="https://ellykp.github.io/misc/info/Elly_Kirwa_CV.pdf" download style="
-        background-color: #f5f0e9;
-        color: #934c2f;
-        padding: 6px 14px;
-        border-radius: 20px;
-        font-family: system-ui, sans-serif;
-        font-size: 0.9em;
-        text-decoration: none;
-        border: 1px solid #934c2f;">
-        📄 Resume
-      </a>
-    </td>
-  </tr>
-</table>
-<p style="font-size:1.05rem; color:#444; margin-top:0.4rem;">
-Building safe, uncertainty-aware AI systems for real-world, high-stakes decision making.
-</p>
+```{=html}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">CV</li>
+  </ol>
+</nav>
 
+<div style="display:flex; gap:1rem; margin-bottom:2rem; flex-wrap:wrap;">
+  <a href="misc/info/Elly_Kirwa_CV.pdf" download style="
+    display:inline-flex; align-items:center; gap:0.5rem;
+    background:#1e567d; color:#fff; padding:10px 20px;
+    border-radius:6px; text-decoration:none; font-weight:600;">
+    <i class="bi bi-download"></i> Download CV (PDF)
+  </a>
+  <a href="misc/info/Elly_Kirwa_Resume.pdf" download style="
+    display:inline-flex; align-items:center; gap:0.5rem;
+    background:#28a745; color:#fff; padding:10px 20px;
+    border-radius:6px; text-decoration:none; font-weight:600;">
+    <i class="bi bi-download"></i> Download Resume (PDF)
+  </a>
+</div>
+```
 
-## <i class="fas fa-briefcase"></i> Professional Experience
-::: {.d-inline-flex style="align-items:baseline"}
-::: p-2
-![](assets/img/algoverse.png){width="90px" fig-alt="Algoverse logo"}
-:::
-::: h3
-Algoverse AI Research
-:::
-:::
-<table style="width: 100%; margin-bottom: 0.5rem;">
-  <tr>
-    <td><strong>AI Safety Research Fellow</strong></td>
-    <td style="text-align: right;">
-      <span style="
-        background-color: #f5f0e9;
-        color: #934c2f;
-        padding: 4px 10px;
-        border-radius: 12px;
-        font-family: system-ui, sans-serif;
-        font-size: 0.9em;
-        white-space: nowrap;">
-        Jan 2026 &nbsp;—&nbsp; Present
-      </span>
-    </td>
-  </tr>
-</table>
+## Professional Summary
 
-- Conducting agentic AI safety research across evaluations, adversarial robustness, and scalable oversight.
-- Designing behavioral and mechanistic evaluations to detect deceptive alignment, reward hacking, and obfuscated internal states in LLM agents.
-- Collaborating with researchers and mentors to design safety benchmarks and diagnostic experiments.
-
-
-::: {.d-inline-flex style="align-items:baseline"}
-::: p-2
-![](assets/img/nrel.png){width="90px" fig-alt="NREL logo"}
-:::
-::: h3
-National Renewable Energy Laboratory (NREL)
-:::
-:::
- <table style="width: 100%; margin-bottom: 0.5rem;">
-  <tr>
-    <td><strong>Machine Learning Engineer (Intern)</strong></td>
-    <td style="text-align: right;">
-      <span style="
-        background-color: #f5f0e9;
-        color: #934c2f;
-        padding: 4px 10px;
-        border-radius: 12px;
-        font-family: system-ui, sans-serif;
-        font-size: 0.9em;
-        white-space: nowrap;">
-        May 2024 &nbsp;—&nbsp; Jan 2025
-      </span>
-    </td>
-  </tr>
-</table>
-- Developed novel machine learning models for automated network topology inference and resilient control policy optimization for complex distributed systems under extreme and uncertain operating scenarios.
-- Designed and implemented Bayesian neural network based semi-supervised learning frameworks with explicit uncertainty estimation to learn from limited and unreliable labeled data in energy distribution networks, achieving up to 98% improvement in model accuracy across varying label-availability and data-quality settings.
-- Co-authored the paper “Advanced Semi-Supervised Learning with Uncertainty Estimation for Phase Identification in Distribution Systems,” accepted at IEEE Power & Energy Society General Meeting (PES GM) 2025, demonstrating robust phase identification under noisy measurements and scarce ground-truth labels.
-- Deployed the trained ML models into a practical workflow for distribution utilities, including data preprocessing pipelines, model serving, and evaluation; implemented containerized deployment and API-based integration with existing grid analytics tools to enable reproducible, scalable, and operator-ready decision support.
+Veterinary epidemiologist and data scientist with 5+ years of experience applying statistical analysis and machine learning to complex health and production data. Experienced in building efficient data pipelines, developing interactive tools, and translating analytical results into actionable insights that support improved animal health, operational performance, and profitability.
 
 ---
-::: {.d-inline-flex style="align-items:baseline"}
-::: p-2
-![](assets/img/comcast.png){width="90px" fig-alt="Comcast logo"}
-:::
-::: h3
-Comcast
-:::
-:::
- <table style="width: 100%; margin-bottom: 0.5rem;">
-  <tr>
-    <td><strong>Software Engineer</strong></td>
-    <td style="text-align: right;">
-      <span style="
-        background-color: #f5f0e9;
-        color: #934c2f;
-        padding: 4px 10px;
-        border-radius: 12px;
-        font-family: system-ui, sans-serif;
-        font-size: 0.9em;
-        white-space: nowrap;">
-        Jul 2019 &nbsp;—&nbsp; Feb 2020
-      </span>
-    </td>
-  </tr>
-</table> 
-- Built and scaled real-time data pipelines using Amazon Kinesis, RabbitMQ, and microservices, processing 1TB+ streaming data/day to support fraud detection and system monitoring at production scale.
-- Developed and deployed ML-based anomaly and behavior-analysis models, incorporating temporal features and probabilistic scoring, leading to a 70% reduction in fraudulent activity through early-signal detection.
-- Delivered low-latency analytics dashboards with PrestoDB, Athena, and Python, enabling real-time visibility into network performance and fraud patterns and improving cross-team decision speed and operational response.
-- Collaborated with cross-functional teams (security, data engineering, product) to integrate fraud-intelligence signals into production systems, improving detection latency, system resilience, and customer-impact mitigation.
 
+## Education
 
-::: {.d-inline-flex style="align-items:baseline"}
-::: p-2
-![](assets/img/IBM.png){width="60px" fig-alt="IBM logo"}
-:::
-::: h3
-IBM
-:::
-:::
- <table style="width: 100%; margin-bottom: 0.5rem;">
-  <tr>
-    <td><strong>Software Engineer</strong></td>
-    <td style="text-align: right;">
-      <span style="
-        background-color: #f5f0e9;
-        color: #934c2f;
-        padding: 4px 10px;
-        border-radius: 12px;
-        font-family: system-ui, sans-serif;
-        font-size: 0.9em;
-        white-space: nowrap;">
-        Jan 2019 &nbsp;—&nbsp; Jun 2019
-      </span>
-    </td>
-  </tr>
-</table> 
-- Optimized large-scale cloud infrastructure on OpenShift, implementing adaptive auto-scaling and resource-allocation policies that reduced operational costs by 30% while improving system stability.
-- Built a real-time monitoring and observability platform using Grafana, Flask, and distributed exporters, providing actionable visibility across 100+ cloud servers and critical microservices.
-- Designed and automated performance-monitoring and alerting pipelines, cutting incident response time by 60% through intelligent thresholds, anomaly alerts, and integrated on-call workflows.
+**Ph.D. in Population Sciences in Animal Health** `Aug 2023 – March 2027 (Expected)`
+Iowa State University (ISU), Ames, IA
+*Dissertation: "Applied Data Analytics for Breeding Herd Efficiency in Commercial Swine Production"*
+Graduate Certificate: Business Data Analytics (Jan 2026 – Dec 2026)
 
+**M.Sc. in Veterinary Preventive Medicine** `Aug 2023 – Dec 2025`
+Iowa State University (ISU), Ames, IA
 
-::: {.d-inline-flex style="align-items:baseline"}
-::: p-2
-![](assets/img/hp.png){width="60px" fig-alt="HP logo"}
-:::
-::: h3
-Hewlett Packard Enterprise (HPE)
-:::
-:::
- <table style="width: 100%; margin-bottom: 0.5rem;">
-  <tr>
-    <td><strong>Software Engineer</strong></td>
-    <td style="text-align: right;">
-      <span style="
-        background-color: #f5f0e9;
-        color: #934c2f;
-        padding: 4px 10px;
-        border-radius: 12px;
-        font-family: system-ui, sans-serif;
-        font-size: 0.9em;
-        white-space: nowrap;">
-        Apr 2017 &nbsp;—&nbsp; Dec 2018
-      </span>
-    </td>
-  </tr>
-</table> 
-<!-- **Software Engineer**   `Apr 2027 – Dec 2022`-->
-- Led the zero-downtime migration of critical enterprise applications from HPI → HPE domains, coordinating infrastructure, DNS, and service-cutover workflows to ensure seamless continuity for all users.
-- Built and integrated OAuth 2.0–based authentication and secure REST APIs using Spring Boot, hardening access controls and improving reliability for applications serving 50K+ active users.
-- Designed and deployed a microservices architecture across Apache and WebLogic servers, optimizing service boundaries and request flows to achieve a 40% improvement in system response time.
+**M.Sc. in Pharmacology & Toxicology** `Sep 2018 – Sep 2022`
+University of Nairobi, Nairobi, Kenya
 
-::: {.d-inline-flex style="align-items:baseline"}
-::: p-2
-![](assets/img/TCS.png){width="90px" fig-alt="TCS logo"}
-:::
-::: h3
-Tata Consultancy Services (TCS)
-:::
-:::
- <table style="width: 100%; margin-bottom: 0.5rem;">
-  <tr>
-    <td><strong>System Engineer</strong></td>
-    <td style="text-align: right;">
-      <span style="
-        background-color: #f5f0e9;
-        color: #934c2f;
-        padding: 4px 10px;
-        border-radius: 12px;
-        font-family: system-ui, sans-serif;
-        font-size: 0.9em;
-        white-space: nowrap;">
-        Jul 2012 &nbsp;—&nbsp; Dec 2015
-      </span>
-    </td>
-  </tr>
-</table> 
-<!--**System Engineer**   `Jun 2020 – Jul 2022` -->
-- Engineered high-throughput ETL pipelines for large-scale data-warehouse integration, reliably processing 100GB+ of data per day and improving downstream analytics latency.
-- Optimized database performance through advanced SQL tuning, indexing, and query-plan diagnostics, reducing execution times by 70% across critical workloads.
-- Delivered $100K in annual cost savings by leading database-optimization and storage-efficiency initiatives, earning an organizational Excellence Award for impact on operational efficiency.
+**Doctor of Veterinary Medicine (DVM)** `Sep 2012 – Sep 2017`
+University of Nairobi, Nairobi, Kenya — *With Distinction*
 
+---
 
+## Skills
 
-## <i class="fas fa-graduation-cap"></i> Education
+- **Programming:** R, Python, SQL, SAS
+- **Machine Learning:** Supervised/Unsupervised Learning, Deep Learning, Natural Language Processing
+- **Data Engineering:** Feature Engineering, Large-Scale Data Processing, Data Cleaning
+- **Epidemiology:** Epidemiological studies and clinical trials
+- **Cloud Services:** Microsoft Azure, DuckDB, AWS
+- **Molecular Techniques:** PCR, DNA extraction, whole genome sequencing
+- **Toxicology:** HPLC, gas chromatography (GC), spectroscopy
+- **Clifton Strengths:** Strategic, Learner, Achiever, Responsibility
 
-::: {.d-inline-flex style="align-items:baseline"}
-::: p-2
-![](assets/img/isu.png){width="60px" fig-alt="Iowa State University logo"}
-:::
-::: h3
-Iowa State University
-:::
-:::
- <table style="width: 100%; margin-bottom: 0.5rem;">
-  <tr>
-    <td><strong>Ph.D. in Computer Science (Minor: Statistics)</strong></td>
-    <td style="text-align: right;">
-      <span style="
-        background-color: #f5f0e9;
-        color: #934c2f;
-        padding: 4px 10px;
-        border-radius: 12px;
-        font-family: system-ui, sans-serif;
-        font-size: 0.9em;
-        white-space: nowrap;">
-        2020 &nbsp;—&nbsp; 2026 (Expected)
-      </span>
-    </td>
-  </tr>
-</table> 
-<!-- **Ph.D. in Computer Science (Minor: Statistics)**   `Aug 2020 – Dec 2025 (expected)` -->
-- Research Focus: Deep Reinforcement Learning, Physics-Informed AI, Uncertainty Quantification, Bayesian Modeling, Secure & Robust Learning, and LLM-Driven Autonomous Agents. Work spans critical-infrastructure optimization, safety-critical control, and large-scale distributed systems.
-- Technical Contributions: Developed physics-informed DRL algorithms for real-time control, Bayesian neural networks with uncertainty estimation for limited/unreliable data, adversarial robustness frameworks for cyber-physical systems, and LLM-augmented decision-making for energy and autonomous systems.
-- Graduate Coursework:
-  - Deep Learning, Natural Language Processing, Advanced Machine Learning, Computer Vision, AI for cybersecurity, Algorithms, Database Systems, Computer Networking
-  - Statistical Theory, Empirical Methods, Experimental Design, Data Analysis and Visualization
+---
 
-<!-- <table style="width: 100%; margin-bottom: 0.5rem;">
-  <tr>
-    <td><strong>MS in Computer Science</strong></td>
-    <td style="text-align: right;">
-      <span style="
-        background-color: #f5f0e9;
-        color: #934c2f;
-        padding: 4px 10px;
-        border-radius: 12px;
-        font-family: system-ui, sans-serif;
-        font-size: 0.9em;
-        white-space: nowrap;">
-        Jan 2015 &nbsp;—&nbsp; Dec 2016
-      </span>
-    </td>
-  </tr>
-</table> 
+## Professional Experience
 
-- Focus: Algorithms, Databases, Network Programming
--->
-## <i class="fas fa-chalkboard-teacher"></i> Teaching Experience
+**Data Analytics Research Assistant** `Aug 2023 – Present`
+*Iowa State University | Ames, IA*
 
-::: {.d-inline-flex style="align-items:baseline"}
-::: p-2
-![](assets/img/isu.png){width="60px" fig-alt="Iowa State University logo"}
-:::
-::: h3
-Iowa State University
-:::
-:::
+- Precision Swine Management: Designing and implementing projects focused on developing algorithms to improve herd efficiency
+- Data Analytics: Utilizing Python, R, and SAS for complex analysis of sow-level production data and sequenced data to develop benchmark performance dashboards and disease surveillance platforms
+- Field Trials: Designing and executing field trials assessing the impact of vaccination programs
 
- <table style="width: 100%; margin-bottom: 0.5rem;">
-  <tr>
-    <td><strong>Teaching Assistant</strong></td>
-    <td style="text-align: right;">
-      <span style="
-        background-color: #f5f0e9;
-        color: #934c2f;
-        padding: 4px 10px;
-        border-radius: 12px;
-        font-family: system-ui, sans-serif;
-        font-size: 0.9em;
-        white-space: nowrap;">
-        2020 &nbsp;—&nbsp; 2025 
-      </span>
-    </td>
-  </tr>
-</table> 
-**Department of Computer Science**
+**Veterinarian & Research Manager** `June 2018 – May 2023`
+*Stanley & Son Limited | Salama, Kenya*
 
-- Supported multiple undergraduate and graduate courses, including Software Development Practices, Database Systems, and Spreadsheets—impacting 300+ students across semesters.
-- Led weekly labs and office hours, guiding students through debugging, system design reasoning, data modeling, and code quality challenges; strengthened problem-solving skills across diverse cohorts.
-- Designed programming assignments, quizzes, and real-world case studies aligned with industry workflows, agile practices, and modern software engineering tools (Git, CI/CD, databases).
-- Mentored students on semester-long capstone projects, coaching teams on architecture decisions, sprint planning, testing, and documentation to simulate professional engineering environments.
+- Data-Driven Production: Introduced production-guided research and data analysis to integrate evidence-based production efficiency, including feed quality testing and somatic cell count monitoring through a developed Farm Management System
+- Antimicrobial Stewardship: Developed an antimicrobial surveillance platform, including a policy framework for antimicrobial use in animals and residues in milk, to ensure farm-level food safety
+- Clinical & Management: Managed all veterinary and animal husbandry requirements, including diagnosis, surgery, post-mortems, disease control programs, and staff supervision
 
-<div style="text-align:center; margin-top:1rem;">
-  <a href="/teaching/teaching.qmd" style="
-    display: inline-block;
-    background-color: #1976d2;
-    color: white;
-    padding: 6px 14px;
-    margin: 4px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    font-family: 'Nunito', sans-serif;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  "> Teaching Portfolio</a>
-</div>
+**Veterinary Intern** `June 2017 – May 2018`
+*Africa Network for Animal Welfare | Nairobi, Kenya*
 
-## <i class="fas fa-flask"></i> Research Experience
+- Attended wildlife veterinary emergencies, rescues, treatments, field surgeries, and desnaring in various National Parks and Conservancies
+- Neutered ~330 animals in spay/neuter campaigns in partnership with local governments and VetTeks-USA
+- Rabies control through vaccinations and spay/neuter programs
+- Reviewed Animal Welfare laws in Kenya for consideration in a Parliamentary motion
 
-::: {.d-inline-flex style="align-items:baseline"}
-::: p-2
-![](assets/img/isu.png){width="60px" fig-alt="Iowa State University logo"}
-:::
-::: h3
-Iowa State University
-:::
-:::
+**OHCEA Workforce** `June – July 2017`
+*One Health East and Central Africa / USAID | Kenya*
 
- <table style="width: 100%; margin-bottom: 0.5rem;">
-  <tr>
-    <td><strong>Research Assistant</strong></td>
-    <td style="text-align: right;">
-      <span style="
-        background-color: #f5f0e9;
-        color: #934c2f;
-        padding: 4px 10px;
-        border-radius: 12px;
-        font-family: system-ui, sans-serif;
-        font-size: 0.9em;
-        white-space: nowrap;">
-        Aug 2022 &nbsp;—&nbsp; Jul 2025 
-      </span>
-    </td>
-  </tr>
-</table> 
-Physics-Informed Deep Reinforcement Learning for Critical Infrastructure Systems
+- Executed demo site workforce on community needs assessment and data collection among the Maasai Community in Loitokitok, Kenya
+- Educated the pastoral community on better livestock production methods and zoonotic diseases
+- Developed a workforce guide model for use in various One Health demo sites
 
--  Conducted research on physics-informed deep reinforcement learning (DRL) for large-scale distributed networks, advancing intelligent resource management and security for critical infrastructure
-- Applied computational DRL algorithms in smart energy systems, optimizing real-time control policies to minimize voltage violations, reduce power loss, and improve system stability across diverse operating conditions.
-- Developed physics-informed actor–critic algorithms that embed domain constraints into the learning process, achieving 30% higher resource-allocation efficiency and significantly reducing violations in complex networks.
-- Designed adversarial attack detection and mitigation frameworks for grid-scale AI models, performing systematic stress testing and implementing defensive DRL techniques to enhance robustness against security threats.
-- Created transfer-learning pipelines enabling DRL agents to generalize across networks of different sizes and topologies, cutting retraining time by 40% when deploying to new environments.
-- Built a Python-based simulation and real-time control framework integrating OPAL-RT hardware with OpenDSS and distributed system components to support HIL (hardware-in-the-loop) experiments.
-- Integrated LLM-driven reasoning to support adaptive control, predictive optimization, and human-AI collaboration inside simulation environments, improving interpretability and situational awareness.
+**Product Development Officer (Part-Time)** `May 2015 – Dec 2022`
+*Obulex Solutions Limited | Westlands, Nairobi*
 
- <table style="width: 100%; margin-bottom: 0.5rem;">
-  <tr>
-    <td><strong>Research Assistant</strong></td>
-    <td style="text-align: right;">
-      <span style="
-        background-color: #f5f0e9;
-        color: #934c2f;
-        padding: 4px 10px;
-        border-radius: 12px;
-        font-family: system-ui, sans-serif;
-        font-size: 0.9em;
-        white-space: nowrap;">
-        Aug 2020 &nbsp;—&nbsp; Jul 2022 
-      </span>
-    </td>
-  </tr>
-</table> 
-Deep Reinforcement Learning & Safety-Critical AI for Autonomous Systems
+- Assisted in the development and testing of software including Revenue Information Management System (RMIS) for Isiolo and Mombasa Counties, and Afya Poa Telemedicine App
+- Graphics design and website development for various clients
 
-- Conducted research on deep reinforcement learning and safety-critical autonomy, focusing on robust perception, control, and sequential decision-making in high-stakes environments.
-- Utilized CARLA simulator to develop end-to-end autonomous driving stacks, including vision-based perception, object detection, trajectory planning, and policy learning under complex traffic dynamics.
-- Applied deep computer vision models for object recognition, semantic segmentation, and multi-sensor fusion, enabling reliable situational awareness and improving downstream control performance in autonomous driving systems.
+---
 
-<div style="text-align:center; margin-top:1rem;">
-  <a href="/rpkg/research.qmd" style="
-    display: inline-block;
-    background-color: #4caf50;
-    color: white;
-    padding: 6px 14px;
-    margin: 4px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    font-family: 'Nunito', sans-serif;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  "> Research Portfolio</a>
-</div>
+## Awards & Fellowships
 
-<!-- 
-## <i class="fas fa-person-chalkboard"></i> Presentations
+- **Real Pork Scholar (2025)** — National Pork Board, USA
+- **Best Oral PhD Presentation** — ASAS Midwest Conference, USA (2025)
+- **Mandela Washington Fellow (MWF)** (2023)
+- MSc Fellowship/Scholarship, University of Nairobi (2017)
+- MSc Scholarship, Iowa State University (2023)
+- PhD Assistantship/Scholarship, Iowa State University (2023)
+- **Best Overall Student**, DVM Class of 2016/2017
+- DVM Exchange Program Recipient, Free University of Berlin, Germany (2015)
+- Undergraduate Fellowship, University of Nairobi: One Health Research Project (2012–2017)
 
-### Upcoming
-- [Parameterized Reporting using Quarto (Invited)](https://www.meetup.com/rladies-dc/events/297344107/) — R-Ladies DC (Jan 2024)
+---
 
-### Past
-- [Parameterized Quarto Reports](talks/2023-09-25_posit_parameterized-quarto/) — posit::conf(2023), Chicago
--->
-<!--
-## <i class="fas fa-user-gear"></i> Skills {.unnumbered}
-<div style="display: grid; grid-template-columns: 180px auto; row-gap: 0.7rem; column-gap: 1rem;">
-  <div><strong>Programming</strong></div><div>Python, R, Java, C++, SAS, MATLAB, SQL, HTML, JS, Node.js, React.js</div>
-  <div><strong>Machine/Deep Learning</strong></div><div>scikit-learn, TensorFlow, PyTorch, Pandas, Matplotlib, Seaborn, Gym, RLlib</div>
-</div>
+## Peer-Reviewed Publications
 
-<div style="text-align: left;">
+1. **Kirwa, E.**, Peterson, B., Grohmann, C. J., Silva, G. S., Ulguim, R. R., Mellagi, A. P., & Frizzo, M. (2025). Assessment of the relationship between lactation feeding patterns, litter performance measures, and sow characteristics on sow farrowing efficiency metrics. *Journal of Animal Science*, 103(Supplement_1), 50–52. [doi:10.1093/jas/skaf102.055](https://doi.org/10.1093/jas/skaf102.055)
 
-<table style="width: 100%; border-collapse: separate; border-spacing: 0 1rem; font-size: 0.95em;">
-  <tr>
-    <td><strong>Programming Languages</strong></td>
-    <td>Python, R, Java, C++, SAS, MATLAB, SQL, HTML, JS, Node.js, React.js</td>
-  </tr>
-  <tr>
-    <td><strong>ML & Data Analysis</strong></td>
-    <td>scikit-learn, TensorFlow, PyTorch, Pandas, Matplotlib, Seaborn, Gym, RLlib</td>
-  </tr>
-  <tr>
-    <td><strong>LLMs & NLP</strong></td>
-    <td>Hugging Face Transformers, LangChain, RAG, Prompt Engineering</td>
-  </tr>
-  <tr>
-    <td><strong>HPC & Big Data</strong></td>
-    <td>Hadoop, Hive, Spark, Kafka, Kinesis, SLURM, MPI, OpenMP</td>
-  </tr>
-  <tr>
-    <td><strong>Simulation & Modeling</strong></td>
-    <td>Opal-RT, OpenDSS (Power), Carla (Autonomous Driving)</td>
-  </tr>
-  <tr>
-    <td><strong>Optimization</strong></td>
-    <td>Gurobi, Pyomo, BoTorch, Optuna, Hyperopt</td>
-  </tr>
-  <tr>
-    <td><strong>Visualization & GIS</strong></td>
-    <td>Tableau, ArcGIS, Leaflet</td>
-  </tr>
-  <tr>
-    <td><strong>Cloud & DevOps</strong></td>
-    <td>AWS (EC2, S3, Lambda), GCP, Docker, Kubernetes, Git, Terraform, Jenkins, CircleCI</td>
-  </tr>
-</table>
+2. Musskopf, M.; Peterson, T.; Machado, I.; Tran Pham Tien, T.; **Kirwa, E.**; et al. (2025). Assessment of the Relationship Between Bioexclusion Practices Applied in Wean-to-Harvest Sites and PRRS Outbreaks. *Vet. Sci.* 12, 1000. [doi:10.3390/vetsci12101000](https://doi.org/10.3390/vetsci12101000)
 
-</div>
--->
-## <i class="fas fa-user-gear"></i> Skills {.unnumbered}
+3. **Kirwa E**, Tangen J., Vargas L.B., Musskopf M., et al. (2025). Dynamics of PRRSV Seroconversion and immune-modulating properties of tilmicosin during naive gilt exposure to PRRS LVI.
 
-<style>
-  .skills-grid{
-    display:grid;
-    grid-template-columns: minmax(160px,220px) 1fr;
-    row-gap: .7rem;
-    column-gap: 1rem;
-  }
-  @media (max-width: 640px){
-    .skills-grid{ grid-template-columns: 1fr; }
-  }
-</style>
+4. **Kirwa, E.**, Aboge G. O., Maitho, T. E., Mbindyo, C. M., Abuom, T. O., & Mainga, A. O. (2021). Antibiotic profile of *Staphylococcus aureus* and Coagulase negative *Staphylococci* from raw camel milk from Garissa County, Kenya. *East African Journal of Science, Technology and Innovation*, 2(4). [doi:10.37425/eajsti.v2i4.364](https://doi.org/10.37425/eajsti.v2i4.364)
 
-<div class="skills-grid">
+5. Bahati D., Makau D., **Kirwa E.** & Mutura J. (2019). An assessment on community perspectives and views on natural resource management and its implications to biodiversity conservation. [doi:10.13140/RG.2.2.10344.34566](http://dx.doi.org/10.13140/RG.2.2.10344.34566)
 
-  <div><strong>Programming</strong></div>
-  <div>Python, R, Java, C++, SAS, MATLAB, SQL, HTML/CSS, JavaScript (Node.js, React)</div>
+---
 
-  <div><strong>Machine / Deep Learning</strong></div>
-  <div>scikit-learn, TensorFlow, PyTorch, pandas, NumPy, Matplotlib, Seaborn, Gym, RLlib, Stable-Baselines3</div>
+## Selected Presentations & Abstracts
 
-  <div><strong>LLMs & NLP</strong></div>
-  <div>OpenAI API, Hugging Face Transformers, LangChain, LlamaIndex, RAG (retrievers, chunking, reranking), vector DBs (FAISS, Chroma, Pinecone), prompt engineering & structured outputs, evaluation (Ragas, Promptfoo)</div>
+1. **Kirwa EK**, et al. Predicting Farrowing Success to Inform Breeding Decisions in Commercial Swine Herds. *Symposium on AI in Veterinary Medicine*, Ithaca, NY. May 2026. Oral.
+2. **Kirwa EK**, et al. Leveraging Machine Learning to Predict Subsequent Farrowing Success. *Society of Animal Science Midwest*, Omaha. March 2026. Oral.
+3. **Kirwa EK**, et al. Factors associated with gilt retention in breeding herds. *Society of Animal Science*, Omaha. March 2026. Oral.
+4. **Kirwa EK**, et al. Using Field Data to Identify Drivers of Gilt Retention and Lifetime Productivity. *The Robust Pig Seminar, PIC*. Feb 2026.
+5. **Kirwa EK**, et al. Practical strategies to maximize sow efficiency. *National Hog Farmer*, 2025. [Link](https://www.nationalhogfarmer.com/livestock-management/practical-strategies-to-maximize-sow-efficiency)
+6. **Kirwa EK**, et al. Linking lactation feeding patterns, litter performance, and sow characteristics to sow efficiency metrics. *Benchmark Magazine*, Spring 2025, pp. 6–7. [Link](https://www.pigchamp.com/flipbooks/benchmark-magazine/2025/USA/4/index.html)
+7. **Kirwa EK**, et al. Factors associated with gilt retention. *International Conference on Pig Livability*, Omaha. 2025. Oral.
+8. **Kirwa EK**: One Health Concept — The Kenyan Perspective. *Mandela Washington Fellowship Conference*, Minneapolis. 2023.
+9. **Kirwa EK**, et al. Phenotypic characterization of antimicrobial-resistant *S. aureus*. *ESCMID/ASM Conference*, Dublin. 2022. Poster.
+10. **Kirwa EK**: How safe is our milk on the shelf? *Kenya One Health Conference*, ILRI, Kenya. 2021.
 
-  <div><strong>Agentic Systems & Orchestration</strong></div>
-  <div>LangGraph (stateful workflows), LangChain Agents (ReAct/MRKL/tools), function/tool calling, multi-agent design, planning & memory, tool-use (search/code/execution), guards & grounding</div>
+---
 
-  <div><strong>MLOps & Deployment</strong></div>
-  <div>MLflow, Weights & Biases, Docker, Kubernetes, FastAPI, gRPC, CI/CD (GitHub Actions, Jenkins, CircleCI), model versioning, scalable inference, monitoring & drift detection</div>
+## Grant Funding
 
-  <div><strong>AI Safety & Robustness</strong></div>
-<div>Safety evaluations & red-teaming pipelines, gradual rollout strategies, alignment & policy-enforcement guardrails, interpretability tooling (SHAP, LIME, Captum), adversarial robustness frameworks (Foolbox, RobustML), anomaly & drift monitoring, reliability & stress testing for safety-critical deployments.</div>
+**Awarded**
 
-  <div><strong>HPC & Big Data</strong></div>
-  <div>Hadoop, Hive, Spark, Kafka, Kinesis, Presto, Athena, distributed computing: SLURM, MPI, OpenMP</div>
+- Silva, Portal, Rosero, **Kirwa**: Real-time surveillance system for mortality in wean-to-finish lots — *Pig Livability*: **$30,000**
+- Silva, Ulgium, **Kirwa**: Early Identification of High-Risk Piglets in Commercial Swine Systems — *Pig Livability*: **$30,000**
+- Silva, Linhares, Holtkamp, Rosero, Trevisan, Rupasinghe, **Kirwa**: Precision sow management system (PSMS) — *ISU VPR*: **$50,000**
 
-  <div><strong>Simulation & Modeling</strong></div>
-  <div>OPAL-RT (HIL), OpenDSS (power systems), CARLA (autonomous driving), CityLearn, cyber-physical system simulation & real-time control frameworks</div>
+**Under Review**
 
-  <div><strong>Optimization</strong></div>
-  <div>Gurobi, Pyomo, BoTorch, Optuna, Hyperopt</div>
+- Silva, Linhares, Holtkamp, Rosero, Trevisan, Rupasinghe, **Kirwa**: Improving breeding herd efficiency by unravelling predictors of sow retention, productivity and profitability — *USDA-CARE*: $300,000
 
-  <div><strong>Visualization & GIS</strong></div>
-  <div>Tableau, ArcGIS, Leaflet, Plotly, Dash</div>
+---
 
-  <div><strong>Cloud & DevOps</strong></div>
-  <div>AWS (EC2, S3, Lambda, EKS), GCP, DigitalOcean, Terraform, Docker, Kubernetes, Git, Jenkins, CircleCI</div>
+## Leadership & Community Engagement
 
-</div>
+- **Moderator**, Weekly Swine Seminar — VetMed, Iowa State University (Dec 2025 – Present)
+- **IVSA Officer**, Kenyan Chapter (Jan 2016 – Sep 2017)
+- **Assistant Secretary**, One Health Club — University of Nairobi (March 2014 – May 2018)
+- **Member**, Kenyan Animal Welfare Advocacy Network (Dec 2016 – May 2017)
 
-
-## <i class="fas fa-award"></i> Honors & Awards
-
-- Selected, Seventh Workshop on Autonomous Energy Systems @ NREL (2024)
-- Selected, ByteBoost Workshop on Accelerating HPC Research Skills (2024)
-- Selected, Oxford Machine Learning Summer School (OxML) (2022)
-- Excellence Award, Database Optimization @ TCS
-- 2nd Place, BAJA SAE India (Safest Terrain Vehicle Category, National Level)
-- Won multiple robotics competitions at inter-university technical festivals.
-
-## <i class="fas fa-handshake-angle"></i> Service
-
-- **Reviewer**:
-  - IEEE Transactions on Industrial Informatics (2025)
-  - Conference on Neural Information Processing Systems (Ethics)(2025)
-  - IEEE Transactions on Neural Networks and Learning Systems (2024)
-  - IEEE PES GM, Grid Edge & ISGT (2023, 2024)
-
-- **Mock Interviewer**: Supporting underrepresented minorities in tech.
-
-- **Volunteer**, Prayaas India (BIT): NGO providing quality education to underprivileged children in slums and villages.
-
-## <i class="fas fa-diagram-project"></i> Projects
-<style>
-  .proj-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 1.2rem;
-    margin-top: 1rem;
-  }
-  .proj-card {
-    display: flex;
-    flex-direction: column;
-    border: 2px solid #1e567d;
-    border-radius: 8px;
-    background: #fff;
-    overflow: hidden;
-    transition: transform .15s ease;
-    text-decoration: none;
-    color: inherit;
-  }
-  .proj-card:hover {
-    transform: translateY(-4px);
-  }
-  .proj-card img {
-    width: 100%;
-    height: 170px;
-    object-fit: contain;
-    padding: 20px 20px 10px 20px;
-    background: #f4f8fb;
-  }
-  .proj-body {
-    display: block;
-    padding: 1rem 1.1rem 1.3rem 1.1rem;
-    font-family: 'Nunito', sans-serif;
-  }
-  .proj-body strong {
-    color: #0b4c6f;
-    font-size: 1.05rem;
-  }
-</style>
-
-<div class="proj-grid">
-
-  <a class="proj-card" href="projects/rag_energy_advisor.qmd">
-  <img src="/misc/info/projects/llm_energy_advisor.png" alt="RAG Energy Advisor badge">
-  <span class="proj-body">
-    <strong>RAG-Enhanced Energy Advisor</strong><br>
-    Retrieval-augmented LLM agent for adaptive control and decision.
-  </span>
-</a>
-
- <a class="proj-card" href="projects/llm_grid_planner.qmd">
-  <img src="/misc/info/projects/llm_grid_planner.png" alt="LLM Grid Planner badge">
-  <span class="proj-body">
-    <strong>LLM-Driven Grid Planner</strong><br>
-    Natural-language-guided reinforcement learning for smart grid management.
-  </span>
-</a>
-
-  <a class="proj-card" href="projects/citylearn.qmd">
-    <img src="/misc/info/projects/citylearnn.png" alt="CityLearn badge">
-    <span class="proj-body">
-      <strong>LLM‑Powered Energy Optimizer</strong><br>
-      Multi‑building energy optimization in CityLearn with LLM guidance.
-    </span>
-  </a>
-
-</div>
-
-<div style="text-align:center; margin-top:2rem;">
-  <a href="projects.qmd" style="
-    display: inline-block;
-    background-color: #1e567d;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    font-family: 'Nunito', sans-serif;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  ">
-    Check My Projects
-  </a>
-</div>
+**Professional Memberships:** Association of American Swine Veterinarians (AASV) · American Society of Animal Science · Toxicology Society of Kenya · Kenya Small and Companion Animal Veterinary Association · Kenya Veterinary Association · Kenya Society for the Protection and Care of Animals

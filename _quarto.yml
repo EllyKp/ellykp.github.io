@@ -17,6 +17,8 @@ website:
     center: |
       <a class="link-dark me-2" href="https://www.linkedin.com/in/elly-kirwa-04a351123/" title="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
       <a class="link-dark me-2" href="https://github.com/EllyKp" title="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+      <a class="link-dark me-2" href="https://orcid.org/0009-0002-9413-7915" title="ORCID" target="_blank" rel="noopener"><i class="ai ai-orcid"></i></a>
+      <a class="link-dark me-2" href="mailto:kirwa@iastate.edu" title="Email" target="_blank" rel="noopener"><i class="fas fa-envelope"></i></a>
     right:
       - text: "Contact"
         aria-label: "Contact Form"

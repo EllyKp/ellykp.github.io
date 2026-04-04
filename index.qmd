@@ -15,6 +15,9 @@ about:
     - icon: github
       text: GitHub
       href: https://github.com/EllyKp
+    - icon: mailbox
+      text: Email
+      href: mailto:kirwa@iastate.edu
 
 listing:
 - id: blog
