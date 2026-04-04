@@ -1,0 +1,36 @@
+---
+title: "Translating On-Farm Data into Decisions — McKean Conference 2025 & PigCHAMP Feature"
+description: |
+  Reflections from the 2025 ISU James D. McKean Swine Disease Conference and our Spring 2025 PigCHAMP Benchmark Magazine publication on leveraging production data to enhance sow efficiency.
+author: "Elly Kirwa"
+date: "2025-07-10"
+categories: [Data Analytics, Sow Efficiency, Swine Production, Research]
+sidebar: false
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+Great opportunity to interact with producers and veterinarians during the **2025 ISU James D. McKean Swine Disease Conference**, presenting on leveraging production data to enhance sow efficiency and inform evidence-based management strategies.
+
+## What We Presented
+
+Our work focuses on translating routinely collected on-farm data into actionable insights — moving beyond simple reporting toward integrated analytics that connect biological performance with economic outcomes.
+
+Key themes:
+
+- How lactation feeding patterns relate to subsequent farrowing success
+- The role of sow and litter characteristics in predicting efficiency metrics
+- Building benchmark dashboards that help producers identify at-risk animals before problems compound
+
+## PigCHAMP Benchmark Magazine Feature
+
+This work was also featured in the **Spring 2025 edition of the PigCHAMP Benchmark Magazine** (pp. 6-7).
+
+> [Read the article](https://www.pigchamp.com/flipbooks/benchmark-magazine/2025/USA/4/index.html)
+
+## Reflections
+
+I am grateful for the opportunity to contribute to the translation of on-farm data into actionable insights that support sustainable, data-informed decision-making in the swine industry.
+

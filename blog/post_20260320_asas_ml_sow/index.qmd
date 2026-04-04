@@ -1,0 +1,30 @@
+---
+title: "Precision Sow Management & Gilt Retention — ASAS Midwest 2026"
+description: |
+  Highlights from our presentations at ASAS Midwest Meeting: machine learning for farrowing success prediction and factors driving gilt retention in commercial herds.
+author: "Elly Kirwa"
+date: "2026-03-20"
+categories: [Swine Production, Machine Learning, Precision Livestock Farming, Research]
+sidebar: false
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+I enjoyed presenting our ongoing research at the American Society of Animal Science Midwest Meeting this week.
+
+## Key Highlights
+
+### Predicting Farrowing Success
+I shared how machine learning can support precision sow management. By identifying at-risk sows, we can refine breeding strategies to improve farrowing rate and herd profitability. The model leverages routinely collected production data to generate actionable predictions — moving from retrospective reporting to forward-looking decision support.
+
+### Gilt Retention
+I also presented on the structural and management factors that drive gilt retention in commercial herds. Our findings show that entry conditions — particularly PRRSV stability, age at first service, and breeding site environment — have significant long-term implications for sow longevity and lifetime productivity.
+
+## Why This Matters
+It is always rewarding to connect with the industry teams working to bridge the gap between research and the barn. These tools are designed not just for academic insight, but for practical, barn-level decision-making that producers can act on today.
+
+## Acknowledgements
+Thanks to my advisor **Dr. Gustavo Silva** and our collaborators: Beau Peterson, Caleb Grohmann, Swaminathan Jayaraman, Matt Frizzo, Rafael Ulguim, Cesar Moura, and Ben Haberl.
+

@@ -33,14 +33,11 @@
   {
     "listing": "/blog/index.html",
     "items": [
-      "/blog/automated-auditing.html",
-      "/blog/blog_20251204_safe_ai/index.html",
-      "/blog/blog_20251124_research_guide/index.html",
-      "/blog/blog_20251210_self_attention_mechanism/index.html",
-      "/blog/technotes_ml_series_20251105_class_unbalanced/index.html",
-      "/blog/technotes_llm_series_20251121_llm_reasoning/index.html",
-      "/blog/CopyOftechnotes_ml_series_20251105_class_unbalanced/index.html",
-      "/blog/llm_evaluation_blog.html"
+      "/blog/post_20260320_asas_ml_sow/index.html",
+      "/blog/post_20251201_pig_livability/index.html",
+      "/blog/post_20250710_mckean_sow_efficiency/index.html",
+      "/blog/post_20250310_asas_1st_place/index.html",
+      "/blog/post_20230801_mandela_fellowship/index.html"
     ]
   },
   {

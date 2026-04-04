@@ -1,0 +1,38 @@
+---
+title: "Completing the Mandela Washington Fellowship — Leadership, One Health & Global Impact"
+description: |
+  Reflections on completing the prestigious Mandela Washington Fellowship — a US Department of State program that deepened my leadership skills, broadened my One Health perspective, and connected me with a global network of change-makers.
+author: "Elly Kirwa"
+date: "2023-08-01"
+categories: [Leadership, One Health, Global Health, Fellowship]
+sidebar: false
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+Thrilled to have successfully completed the prestigious **Mandela Washington Fellowship** — a flagship program by the **US Department of State!**
+
+## What Is the Mandela Washington Fellowship?
+
+The Mandela Washington Fellowship for Young African Leaders is the flagship program of the Young African Leaders Initiative (YALI). It brings together young leaders from across sub-Saharan Africa for academic and leadership institutes at US universities, followed by a summit in Washington, DC.
+
+## My Experience
+
+This transformative experience enriched my leadership skills, broadened my **One Health perspective**, and connected me with an incredible network of change-makers from across Africa and the United States.
+
+Key principles reinforced through the fellowship:
+
+- **Evidence-based leadership** — using data and research to drive community-level decisions
+- **Cross-sectoral collaboration** — One Health requires bridging animal health, human health, and environmental sectors
+- **Sustainable impact** — developing solutions that outlast any single intervention
+
+## The One Health Connection
+
+As a veterinary epidemiologist, One Health is central to my professional identity. The fellowship deepened my appreciation for how animal health, human health, and environmental sustainability are inextricably linked — whether discussing antimicrobial resistance in livestock, zoonotic disease transmission, or food security in pastoral communities.
+
+## Looking Forward
+
+Grateful for the opportunity and excited to channel this energy into driving positive impact in my community and beyond. Here is to the journey of lifelong learning, collaboration, and meaningful work.
+

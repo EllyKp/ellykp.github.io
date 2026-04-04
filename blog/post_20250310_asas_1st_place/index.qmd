@@ -1,0 +1,32 @@
+---
+title: "1st Place at ASAS Midwest 2025 — Lactation Feeding Patterns & Sow Farrowing Efficiency"
+description: |
+  Honored to receive 1st place in the PhD Oral Competition at the 2025 ASAS Midwest Conference for our research on lactation feeding patterns, litter performance, and sow farrowing efficiency metrics.
+author: "Elly Kirwa"
+date: "2025-03-10"
+categories: [Swine Production, Sow Efficiency, Research, Award]
+sidebar: false
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+Honored and grateful — our presentation at the **2025 American Society of Animal Science (ASAS) Midwest Conference** was awarded **1st place in the PhD Oral Competition!**
+
+## The Research
+
+The talk explored the relationship between **lactation feeding patterns, litter performance, and sow characteristics** on sow farrowing efficiency metrics — underscoring the significance of data-driven solutions in swine production.
+
+**Key question:** Can we use what happens during lactation to predict whether a sow will successfully farrow in her next cycle?
+
+Our analysis shows that lactation feed intake patterns, combined with litter size and sow parity, provide meaningful predictive signals. By integrating these factors into a decision-support framework, producers can identify sows at elevated risk of farrowing failure before the next breeding cycle — enabling targeted interventions that protect herd productivity and profitability.
+
+## Why This Matters
+
+Every farrowing failure represents a direct economic loss — in feed, labor, and lost piglets. Data-driven early warning tools give producers the chance to act before losses accumulate.
+
+## Acknowledgements
+
+A huge thank you to my advisor **Dr. Gustavo Silva**, collaborators, and the incredible **FieldEpi team** at Iowa State University for the valuable discussions and support throughout this work.
+

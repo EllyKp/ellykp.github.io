@@ -1,0 +1,28 @@
+---
+title: "Gilt Retention in Commercial Herds — 2025 International Pig Livability Conference"
+description: |
+  Presenting our findings on factors associated with gilt retention at the 2025 International Pig Livability Conference — and why reproductive management and herd environment matter for sow longevity.
+author: "Elly Kirwa"
+date: "2025-12-01"
+categories: [Swine Production, Gilt Retention, Sow Longevity, Research]
+sidebar: false
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+I had the opportunity to present part of our work at the **2025 International Pig Livability Conference**, focusing on factors associated with gilt retention in commercial breeding herds.
+
+## Key Findings
+
+Our findings highlight the combined impact of reproductive management and herd environment on sow longevity. Optimizing gilt entry conditions — particularly PRRSV stability, age at first service, and breeding site — offers practical strategies to enhance productivity and extend productive sow life.
+
+## The Bigger Picture
+
+Gilt retention is not just a biological outcome — it is an economic one. Every gilt that fails to reach her second or third parity represents a significant replacement cost and lost productivity potential. By identifying the predictors of retention early, producers can intervene with the right management strategies at the right time.
+
+## Industry Collaboration
+
+The robust exchange of ideas with producers, researchers, and industry teams was the ultimate highlight of the conference, underscoring the collaborative nature of the swine industry.
+
