@@ -1,0 +1,366 @@
+/* ============================================================
+   Elly Kirwa — Custom Visual Design Overrides
+   Professional palette: Navy · Teal · Green · Amber
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* ── Root Variables ── */
+:root {
+  --ek-navy:      #1B4F72;
+  --ek-navy-dark: #154360;
+  --ek-teal:      #148F77;
+  --ek-teal-light:#1ABC9C;
+  --ek-green:     #1E8449;
+  --ek-amber:     #E67E22;
+  --ek-amber-dark:#CA6F1E;
+  --ek-sky:       #2E86C1;
+  --ek-sky-light: #AED6F1;
+  --ek-bg:        #F4F8FB;
+  --ek-bg2:       #EBF5FB;
+  --ek-white:     #FFFFFF;
+  --ek-text:      #1C2833;
+  --ek-text-muted:#5D6D7E;
+  --ek-border:    #D6EAF8;
+  --ek-shadow:    0 4px 20px rgba(27,79,114,0.12);
+  --ek-shadow-lg: 0 8px 32px rgba(27,79,114,0.18);
+}
+
+/* ── Body & Typography ── */
+body {
+  font-family: 'Inter', 'Poppins', sans-serif !important;
+  background-color: var(--ek-bg) !important;
+  color: var(--ek-text) !important;
+  line-height: 1.75 !important;
+}
+
+h1, h2, h3 {
+  font-family: 'Merriweather', 'PT Serif', serif !important;
+  color: var(--ek-navy) !important;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: 2.1rem !important; }
+h2 { font-size: 1.55rem !important; border-bottom: 2px solid var(--ek-sky-light); padding-bottom: 0.3rem; margin-top: 2rem; }
+h3 { font-size: 1.22rem !important; color: var(--ek-teal) !important; }
+h4 { color: var(--ek-green) !important; font-size: 1.05rem !important; }
+
+a { color: var(--ek-amber) !important; text-decoration: none; }
+a:hover { color: var(--ek-amber-dark) !important; text-decoration: underline; }
+
+/* ── Navbar ── */
+.navbar {
+  background: linear-gradient(135deg, var(--ek-navy) 0%, var(--ek-navy-dark) 100%) !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18) !important;
+  border-bottom: 3px solid var(--ek-teal-light) !important;
+  padding: 0.6rem 1rem !important;
+}
+
+.navbar-brand, .navbar .nav-link {
+  color: #E8F4FD !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+
+.navbar .nav-link:hover, .navbar .nav-link.active {
+  color: var(--ek-teal-light) !important;
+}
+
+.navbar-brand {
+  font-family: 'Merriweather', serif !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  color: #FFFFFF !important;
+}
+
+.navbar .dropdown-menu {
+  background: var(--ek-navy-dark) !important;
+  border: 1px solid var(--ek-teal) !important;
+  border-radius: 8px !important;
+  box-shadow: var(--ek-shadow) !important;
+}
+
+.navbar .dropdown-item {
+  color: #E8F4FD !important;
+}
+.navbar .dropdown-item:hover {
+  background: var(--ek-teal) !important;
+  color: #fff !important;
+}
+
+/* ── Hero / About section ── */
+#hero-heading {
+  background: linear-gradient(135deg, var(--ek-bg2) 0%, #FDFEFE 100%) !important;
+  border-radius: 16px !important;
+  padding: 2.5rem !important;
+  box-shadow: var(--ek-shadow) !important;
+  border-left: 5px solid var(--ek-teal) !important;
+  margin-bottom: 2rem !important;
+}
+
+/* Profile image */
+.about-image img, img.about-image, .quarto-about-trestles img {
+  border: 4px solid var(--ek-teal) !important;
+  box-shadow: 0 6px 24px rgba(20,143,119,0.25) !important;
+  border-radius: 50% !important;
+}
+
+/* About social links */
+.about-links .about-link {
+  background: var(--ek-navy) !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+  padding: 6px 14px !important;
+  margin-right: 6px !important;
+  border: none !important;
+  font-size: 0.85rem !important;
+  transition: background 0.2s, transform 0.15s !important;
+  box-shadow: 0 2px 8px rgba(27,79,114,0.2) !important;
+}
+.about-links .about-link:hover {
+  background: var(--ek-teal) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* ── Cards (Quarto listing cards) ── */
+.card {
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: var(--ek-shadow) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  overflow: hidden !important;
+  background: var(--ek-white) !important;
+}
+
+.card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: var(--ek-shadow-lg) !important;
+}
+
+.card .card-body { padding: 1.2rem 1.4rem !important; }
+
+.card .listing-title, .card-title {
+  color: var(--ek-navy) !important;
+  font-weight: 700 !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 1.35 !important;
+}
+
+.card .card-subtitle, .listing-author, .listing-date {
+  color: var(--ek-text-muted) !important;
+  font-size: 0.8rem !important;
+}
+
+.card img.thumbnail-image, .card .card-img-top {
+  border-bottom: 3px solid var(--ek-teal-light) !important;
+  object-fit: cover !important;
+}
+
+/* ── Section Dividers ── */
+hr {
+  border: none !important;
+  height: 2px !important;
+  background: linear-gradient(to right, var(--ek-teal), var(--ek-sky-light), transparent) !important;
+  margin: 2rem 0 !important;
+}
+
+/* ── Research Focus Cards (custom grid on homepage) ── */
+.proj-card {
+  border: 2px solid var(--ek-border) !important;
+  border-radius: 12px !important;
+  background: var(--ek-white) !important;
+  box-shadow: 0 3px 12px rgba(27,79,114,0.08) !important;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s !important;
+}
+
+.proj-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: var(--ek-shadow-lg) !important;
+  border-color: var(--ek-teal) !important;
+}
+
+.proj-epi strong { color: var(--ek-teal) !important; }
+.proj-econ strong { color: var(--ek-sky) !important; }
+.proj-ml strong { color: var(--ek-navy) !important; }
+.proj-surv strong { color: var(--ek-green) !important; }
+
+/* ── Explore section boxes ── */
+.explore-box {
+  background: var(--ek-white) !important;
+  border-radius: 12px !important;
+  box-shadow: var(--ek-shadow) !important;
+  border: 1px solid var(--ek-border) !important;
+}
+
+.explore-box:hover {
+  box-shadow: var(--ek-shadow-lg) !important;
+  border-color: var(--ek-teal) !important;
+}
+
+.explore-title {
+  color: var(--ek-navy) !important;
+  font-family: 'Merriweather', serif !important;
+}
+
+.explore-link a {
+  color: var(--ek-amber) !important;
+  font-weight: 600 !important;
+}
+
+/* ── Page footer ── */
+.nav-footer {
+  background: linear-gradient(135deg, var(--ek-navy-dark) 0%, var(--ek-navy) 100%) !important;
+  color: #B3C6D6 !important;
+  border-top: 3px solid var(--ek-teal) !important;
+  padding: 1.5rem 0 !important;
+}
+
+.nav-footer a, .nav-footer .nav-link {
+  color: #AED6F1 !important;
+}
+.nav-footer a:hover {
+  color: var(--ek-teal-light) !important;
+  text-decoration: none !important;
+}
+
+/* ── Quarto TOC (sidebar) ── */
+#quarto-sidebar, #TOC {
+  background: var(--ek-bg) !important;
+  border-right: 1px solid var(--ek-border) !important;
+}
+
+#TOC a { color: var(--ek-text-muted) !important; }
+#TOC a.active, #TOC a:hover { color: var(--ek-teal) !important; font-weight: 600 !important; }
+
+/* ── Buttons ── */
+.btn-primary {
+  background: linear-gradient(135deg, var(--ek-navy) 0%, var(--ek-sky) 100%) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  box-shadow: 0 3px 10px rgba(27,79,114,0.25) !important;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, var(--ek-teal) 0%, var(--ek-green) 100%) !important;
+  border: none !important;
+}
+
+/* ── CV / Publications pages ── */
+.breadcrumb {
+  background: var(--ek-bg2) !important;
+  border-radius: 8px !important;
+  padding: 0.6rem 1rem !important;
+  border: 1px solid var(--ek-border) !important;
+}
+
+.breadcrumb-item a { color: var(--ek-teal) !important; }
+.breadcrumb-item.active { color: var(--ek-text-muted) !important; }
+
+/* Publication/listing titles */
+.pub-title-link, .listing-title, .lead {
+  color: var(--ek-navy) !important;
+}
+
+:root { --pub-color: var(--ek-teal) !important; }
+
+.pub-count {
+  background: rgba(20,143,119,0.08) !important;
+  border-color: rgba(20,143,119,0.3) !important;
+  color: var(--ek-teal) !important;
+}
+
+/* ── Blog / post pages ── */
+.quarto-title .title {
+  color: var(--ek-navy) !important;
+  font-size: 1.9rem !important;
+  font-weight: 700 !important;
+}
+
+.quarto-title .subtitle {
+  color: var(--ek-teal) !important;
+  font-size: 0.95rem !important;
+}
+
+/* Category badges */
+.quarto-category {
+  background: var(--ek-bg2) !important;
+  color: var(--ek-teal) !important;
+  border: 1px solid var(--ek-teal) !important;
+  border-radius: 20px !important;
+  padding: 2px 10px !important;
+  font-size: 0.75rem !important;
+}
+
+/* ── Code blocks ── */
+pre, code {
+  background: #F0F4F8 !important;
+  border-left: 3px solid var(--ek-teal) !important;
+  border-radius: 6px !important;
+}
+
+/* ── Search ── */
+.quarto-search .aa-DetachedSearchButton,
+#quarto-search .bi-search {
+  color: #E8F4FD !important;
+}
+
+/* ── Responsive & utility ── */
+@media (max-width: 768px) {
+  #hero-heading { padding: 1.5rem !important; }
+  h1 { font-size: 1.7rem !important; }
+  h2 { font-size: 1.3rem !important; }
+}
+
+/* ── Subtle page background pattern ── */
+.page-layout-full, #quarto-content {
+  background: transparent !important;
+}
+
+/* ── Hero subtitle accent on homepage ── */
+.quarto-about-trestles .about-entity .about-image {
+  filter: drop-shadow(0 4px 12px rgba(20,143,119,0.25));
+}
+
+/* ── Animated gradient hero banner ── */
+.ek-hero-banner {
+  background: linear-gradient(135deg, var(--ek-navy) 0%, var(--ek-teal) 50%, var(--ek-sky) 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  box-shadow: var(--ek-shadow-lg);
+}
+
+/* ── Section title chips ── */
+h3[align="center"] {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--ek-navy) 0%, var(--ek-teal) 100%);
+  color: white !important;
+  padding: 6px 24px !important;
+  border-radius: 30px !important;
+  font-size: 1rem !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+  margin-bottom: 1.2rem !important;
+  box-shadow: 0 3px 12px rgba(27,79,114,0.2) !important;
+}
+
+/* ── Tag / badge chips ── */
+.badge, span.badge {
+  border-radius: 20px !important;
+  font-size: 0.7rem !important;
+}
+
+/* ── Table styling ── */
+table { border-collapse: separate !important; border-spacing: 0 !important; }
+thead tr th {
+  background: var(--ek-navy) !important;
+  color: white !important;
+  font-weight: 600 !important;
+  padding: 10px 14px !important;
+}
+tbody tr:nth-child(even) { background: var(--ek-bg2) !important; }
+tbody tr:hover { background: var(--ek-sky-light) !important; }

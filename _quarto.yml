@@ -25,7 +25,7 @@ website:
         href: contact.qmd
 
   navbar:
-    background: "#A9CCE3"
+    background: "#1B4F72"
     search: true
     right:
       - text: ""
