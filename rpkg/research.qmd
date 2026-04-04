@@ -8,679 +8,660 @@ format:
     anchor-sections: true
     page-layout: full
     html-math-method: mathjax
-    pandoc-args: ["--number-offset=0"]
 ---
-
-## Research{#research-vision}
-I develop safe, interpretable, and adaptive AI systems for real-world cyber-physical environments that must operate under uncertainty, strict physical constraints, and adversarial conditions. My work sits at the intersection of machine learning, control theory, optimization, and AI safety, with a core focus on building models that are robust, predictable, and deployable at scale.
-
-<div style="
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin-bottom:0.6rem;
-">
-  <h3 style="margin:0; color:#7a2e1f;">Vision</h3>
-
-  <a href="https://kundan-kumarr.github.io/publications/"
-     style="
-       display:inline-flex;
-       align-items:center;
-       gap:6px;
-       padding:6px 14px;
-       border:1.5px solid #7a2e1f;
-       border-radius:999px;
-       font-size:0.85rem;
-       font-weight:600;
-       color:#7a2e1f;
-       background:rgba(122,46,31,0.06);
-       text-decoration:none;
-       white-space:nowrap;
-     ">
-    Full Publications →
-  </a>
-</div>
-
-
-I aim to create AI agents that generalize across environments, learn from imperfect or unreliable data, and remain stable under distribution shifts. These capabilities are essential both for scientific progress and for building production-grade intelligent systems used in industry.
-
-My research centers around five pillars:
-  
-- Safe & Trustworthy Reinforcement Learning: Designing agents that remain reliable under sensor noise, hardware faults, non-stationarity, and adversarial perturbations. This includes constraint-aware learning, certified robustness, and safe exploration in safety-critical settings.
-- Physics-informed Deep Reinforcement Learning (DRL): Embedding physical laws, invariants, and feasibility constraints directly into model architectures and learning objectives to improve convergence, interpretability, and real-world deployability.
-- Probabilistic & Bayesian Modeling: Quantifying epistemic and aleatoric uncertainty for risk-aware planning in partially observable, high-stakes environments using Bayesian neural networks, uncertainty-aware RL, and probabilistic inference.
-- Large Language Models (LLMs) for autonomous reasoning: Leveraging LLMs to support high-level planning, explainable decision pipelines, natural-language supervision, and adaptive control. This enables human-AI collaboration and interpretable reasoning in complex systems.
--  Vision-based simulation environments: Using platforms such as CARLA, CityLearn, AirSim, and OpenDSS to train agents in multimodal, visually rich environments, supporting robust perception-control integration and sim-to-real transfer.
-  
-
-### Mission
-By integrating physics-guided structure, probabilistic reasoning, and safe reinforcement learning, my mission is to build the next generation of AI systems that are:
-
-- Reliable, even under uncertainty, noise, and adversarial conditions
-- Generalizable across tasks, scales, and distribution shifts 
-- Interpretable to operators, engineers, and decision-makers
-- Deployable in large-scale, real-world cyber-physical environments
-
-My research advances the foundation needed to deploy trustworthy AI across critical infrastructures, autonomous systems, and safety-critical infrastructure domains where reliability and robustness are essential for real-world impact.
-
-## Research Focus {#research-focus}
-These focus areas organize my ongoing and recent projects that bridge **fundamental methods** and **deployable systems**.
-<!-- Styling (optional if handled globally) -->
 
 ```{=html}
 <style>
-  .proj-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin-top: 0.5rem;
-  }
+/* ── Research page custom styles ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,700;1,400&display=swap');
 
-  .proj-card {
-    border: 2px solid #ddd;
-    border-radius: 12px;
-    padding: 1.2rem;
-    background: #fff;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.2s ease;
-    max-width: 360px;
-    margin: 0 auto;
-    text-align: center;
+.rp-hero {
+  background: linear-gradient(135deg, #1B4F72 0%, #148F77 60%, #1E8449 100%);
+  border-radius: 18px;
+  padding: 3rem 2.5rem;
+  color: white;
+  margin-bottom: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.rp-hero::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 220px; height: 220px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 50%;
+}
+.rp-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; left: -40px;
+  width: 160px; height: 160px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 50%;
+}
+.rp-hero h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  color: white !important;
+  border: none !important;
+  margin-bottom: 0.8rem;
+}
+.rp-hero p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.9);
+  max-width: 820px;
+}
+.rp-hero .tagline {
+  font-size: 1.15rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: #AED6F1;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
 
-    /* ✅ kill hyperlink look inside the whole card */
-    text-decoration: none !important;
-    color: inherit !important;
-  }
+/* ── Stats banner ── */
+.rp-stats {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.rp-stat {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 12px;
+  padding: 0.7rem 1.4rem;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  min-width: 110px;
+}
+.rp-stat .num {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  display: block;
+}
+.rp-stat .lbl {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
 
-  /* ✅ also kill underline/color on any nested elements */
-  .proj-card * {
-    text-decoration: none !important;
-    color: inherit;
-  }
+/* ── Section chip headings ── */
+.rp-section-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #1B4F72, #148F77);
+  color: white !important;
+  padding: 6px 22px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.05em;
+  margin: 2rem 0 1.2rem 0;
+  box-shadow: 0 3px 12px rgba(27,79,114,0.2);
+}
 
-  .proj-card:hover {
-    transform: translateY(-3px);
-    text-decoration: none !important;
-  }
+/* ── Pillar cards ── */
+.rp-pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.3rem;
+  margin-bottom: 2rem;
+}
+.rp-pillar {
+  border-radius: 14px;
+  padding: 1.5rem 1.4rem;
+  background: #ffffff;
+  box-shadow: 0 3px 16px rgba(27,79,114,0.09);
+  border-top: 4px solid #148F77;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+.rp-pillar:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 28px rgba(27,79,114,0.16);
+}
+.rp-pillar .icon {
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+  display: block;
+}
+.rp-pillar h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1B4F72 !important;
+  margin-bottom: 0.5rem;
+}
+.rp-pillar p {
+  font-size: 0.88rem;
+  color: #4A5568;
+  line-height: 1.6;
+  margin: 0;
+}
+.rp-pillar.p1 { border-top-color: #148F77; }
+.rp-pillar.p2 { border-top-color: #2E86C1; }
+.rp-pillar.p3 { border-top-color: #1E8449; }
+.rp-pillar.p4 { border-top-color: #E67E22; }
+.rp-pillar.p5 { border-top-color: #8E44AD; }
 
-  /* Small, centered hex-badge style */
-  .proj-card img {
-    width: 130px;
-    height: 130px;
-    object-fit: contain;
-    display: block;
-    margin: 0.4rem auto 0.9rem auto;
-    background-color: transparent;
-    padding: 0;
-    border-bottom: none;
-  }
+/* ── Project cards ── */
+.rp-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.4rem;
+  margin-bottom: 2rem;
+}
+.rp-project {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.4rem 1.5rem;
+  box-shadow: 0 3px 16px rgba(27,79,114,0.09);
+  border-left: 5px solid #1B4F72;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.rp-project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(27,79,114,0.15);
+}
+.rp-project.col-teal { border-left-color: #148F77; }
+.rp-project.col-green { border-left-color: #1E8449; }
+.rp-project.col-amber { border-left-color: #E67E22; }
+.rp-project.col-navy  { border-left-color: #1B4F72; }
+.rp-project.col-purple { border-left-color: #8E44AD; }
 
-  .proj-body {
-    font-family: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  }
+.rp-project .proj-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #148F77;
+  margin-bottom: 0.5rem;
+}
+.rp-project h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: #1B4F72 !important;
+  margin-bottom: 0.45rem;
+  line-height: 1.35;
+}
+.rp-project p {
+  font-size: 0.85rem;
+  color: #4A5568;
+  line-height: 1.6;
+  margin: 0;
+}
+.rp-project .proj-status {
+  margin-top: 0.8rem;
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+.status-active { background: #D5F5E3; color: #1E8449; }
+.status-complete { background: #D6EAF8; color: #1B4F72; }
+.status-funded { background: #FDEBD0; color: #E67E22; }
 
-  .group-label {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin: 2rem 0 0.5rem 0;
-    color: #6c2b88;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    text-align: center;
-  }
+/* ── Publications ── */
+.rp-pub-list { list-style: none; padding: 0; }
+.rp-pub-list li {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.1rem 1.4rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 10px rgba(27,79,114,0.07);
+  border-left: 4px solid #148F77;
+}
+.rp-pub-list li:hover { box-shadow: 0 4px 16px rgba(27,79,114,0.13); }
+.pub-num {
+  display: inline-block;
+  background: #1B4F72;
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 22px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+.pub-title { font-weight: 600; color: #1B4F72; font-size: 0.95rem; }
+.pub-journal { color: #148F77; font-style: italic; font-size: 0.87rem; }
+.pub-authors { color: #5D6D7E; font-size: 0.83rem; margin: 3px 0; }
+.pub-me { color: #1E8449; font-weight: 700; }
+.pub-actions { margin-top: 0.5rem; display: flex; gap: 8px; flex-wrap: wrap; }
+.pub-btn {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1.5px solid currentColor;
+  text-decoration: none;
+  background: transparent;
+  transition: background 0.15s;
+}
+.pub-btn:hover { opacity: 0.8; }
+.btn-doi { color: #1B4F72; }
+.btn-doi:hover { background: rgba(27,79,114,0.08); }
+.btn-pdf { color: #1E8449; }
+.btn-pdf:hover { background: rgba(30,132,73,0.08); }
 
-  .proj-llm strong {
-    color: #8B008B !important;
-    font-size: 1.05rem;
-  }
+/* ── Grant cards ── */
+.rp-grants {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.rp-grant {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.2rem 1.3rem;
+  box-shadow: 0 2px 10px rgba(27,79,114,0.08);
+  border-top: 4px solid #E67E22;
+  transition: transform 0.2s;
+}
+.rp-grant:hover { transform: translateY(-3px); }
+.rp-grant .amount {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #E67E22;
+}
+.rp-grant .funder {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #5D6D7E;
+  margin-bottom: 0.5rem;
+}
+.rp-grant h4 { font-size: 0.88rem; color: #1B4F72 !important; font-weight: 600; margin: 0; }
+.rp-grant.pending { border-top-color: #8E44AD; }
+.rp-grant.pending .amount { color: #8E44AD; }
 
-  /* Optional: make body text slightly softer */
-  .proj-body {
-    color: #4c4c4c;
-  }
+/* ── Presentation timeline ── */
+.rp-timeline { position: relative; padding-left: 2rem; margin-bottom: 2rem; }
+.rp-timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #148F77, #1B4F72, #E67E22);
+  border-radius: 2px;
+}
+.rp-timeline-item {
+  position: relative;
+  padding: 0.8rem 0 0.8rem 1rem;
+  border-bottom: 1px solid #EBF5FB;
+}
+.rp-timeline-item:last-child { border-bottom: none; }
+.rp-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.7rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: #148F77;
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px #148F77;
+}
+.rp-timeline-item .tl-year {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #E67E22;
+  text-transform: uppercase;
+}
+.rp-timeline-item .tl-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1B4F72;
+  line-height: 1.35;
+}
+.rp-timeline-item .tl-venue {
+  font-size: 0.8rem;
+  color: #5D6D7E;
+  font-style: italic;
+}
+.rp-timeline-item .tl-type {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.type-oral { background: #D5F5E3; color: #1E8449; }
+.type-poster { background: #D6EAF8; color: #2E86C1; }
+.type-invited { background: #FDEBD0; color: #E67E22; }
+
 </style>
 
-<!-- Group: DRL-based Control -->
-
-<div class="group-label">DRL-based Control</div>
-
-<div class="proj-grid">
-
-  <a class="proj-card" href="drl_vvc/index.qmd">
-    <span class="proj-body proj-llm">
-      <img src="drl_vvc/drl_vvc.png" alt="DRL Control">
-      <strong>DRL for Volt-VAR</strong><br>
-      Design control agents for voltage regulation and reactive power optimization in smart distribution grids.
-    </span>
-  </a>
-
-  <a class="proj-card" href="physics-informed-actor-critic/index.qmd">
-    <span class="proj-body proj-llm">
-      <img src="physics-informed-actor-critic/physics.png" alt="Actor Critic">
-      <strong>Physics-Informed Actor-Critic</strong><br>
-      Embed grid physics and control limits directly into the DRL learning loop for stable and efficient decisions.
-    </span>
-  </a>
-
-  <a class="proj-card" href="sim2real/index.qmd">
-    <span class="proj-body proj-llm">
-      <img src="sim2real/sim2real.png" alt="Sim2Real Transfer">
-      <strong>Sim-to-Real Transfer</strong><br>
-      Train agents in simulated OpenDSS environments and deploy them on real-time OPAL-RT setups.
-    </span>
-  </a>
-
+<!-- ── HERO ── -->
+<div class="rp-hero">
+  <div class="tagline">From barn records to breakthrough insights</div>
+  <h1>Research Overview</h1>
+  <p>
+    I turn the messy, longitudinal data of commercial livestock production into analytics that matter —
+    to the producer making culling decisions at 5 a.m., to the company modeling profitability across
+    10,000 sows, and to the scientist building the next generation of precision animal health tools.
+    My work lives at the intersection of <strong>epidemiology</strong>, <strong>applied machine learning</strong>,
+    and <strong>production economics</strong>, with a singular focus: translate numbers into decisions.
+  </p>
+  <div class="rp-stats">
+    <div class="rp-stat"><span class="num">5</span><span class="lbl">Publications</span></div>
+    <div class="rp-stat"><span class="num">10+</span><span class="lbl">Presentations</span></div>
+    <div class="rp-stat"><span class="num">$110K</span><span class="lbl">Grants Awarded</span></div>
+    <div class="rp-stat"><span class="num">$300K</span><span class="lbl">Under Review</span></div>
+    <div class="rp-stat"><span class="num">3</span><span class="lbl">Active Projects</span></div>
+  </div>
 </div>
+```
 
-<!-- Group: 🔐 Safe & Trustworthy RL -->
+## Research Vision {#research-vision}
 
-<div class="group-label">Safe & Trustworthy RL</div>
+Commercial swine production generates extraordinary amounts of data — every breeding event, every litter born, every sow removed records a signal. Yet most of that signal stays trapped in software dashboards, never translated into predictive intelligence. My research challenges that gap.
 
-<div class="proj-grid">
+I ask: *What does the data already know that the producer doesn't?*
 
-  <a class="proj-card" href="safe/index.qmd">
-    <span class="proj-body proj-llm">
-      <img src="safe/safe.png" alt="Safe RL">
-      <strong>Robust & Stable Learning</strong><br>
-      Develop agents that ensure system safety, robustness, and interpretability under uncertainty.
-    </span>
-  </a>
+Working with large-scale, longitudinal production datasets, I build models that identify which sows are at risk before they fail, which gilts will stay productive through multiple parities, and which management decisions yield the greatest return under real-world economic constraints. The analytics I develop are not academic exercises — they are designed to be used, understood, and acted upon at the barn level.
 
-  <a class="proj-card" href="uncertainty/index.qmd">
-    <span class="proj-body proj-llm">
-      <img src="uncertainty/uncertainty.png" alt="Uncertainty Quantification">
-      <strong>Uncertainty-Aware Policies</strong><br>
-      Quantify epistemic and aleatoric uncertainty in high-stakes, partially observable settings.
-    </span>
-  </a>
+```{=html}
+<div class="rp-section-chip">🔬 Research Pillars</div>
 
-</div>
+<div class="rp-pillars">
 
-<!-- Group: Transfer & Meta-Adaptation -->
+  <div class="rp-pillar p1">
+    <span class="icon">📈</span>
+    <h4>Longitudinal Performance Modeling</h4>
+    <p>Modeling sow- and parity-specific trajectories over time to predict reproductive outcomes, longevity, and lifetime productivity — treating production records as the time-series data they truly are.</p>
+  </div>
 
-<div class="group-label">Transfer & Meta-Adaptation</div>
+  <div class="rp-pillar p2">
+    <span class="icon">🤖</span>
+    <h4>Explainable Machine Learning</h4>
+    <p>Developing transparent, interpretable ML models that translate complex multivariate patterns into producer-ready decision rules — prediction with purpose, not just prediction with accuracy.</p>
+  </div>
 
-<div class="proj-grid">
+  <div class="rp-pillar p3">
+    <span class="icon">🌽</span>
+    <h4>Production Economics & Decision Support</h4>
+    <p>Partial budgeting, scenario simulation, and economic modeling of sow removal, replacement, and retention decisions — quantifying the dollar value of better data-driven choices.</p>
+  </div>
 
-  <a class="proj-card" href="domain_adaptation/index.qmd">
-    <span class="proj-body proj-llm">
-      <img src="domain_adaptation/domain_adaptation.png" alt="Transfer Learning">
-      <strong>Domain Adaptation</strong><br>
-      Enable agents to generalize across grids with different topologies, dynamics, and loads.
-    </span>
-  </a>
+  <div class="rp-pillar p4">
+    <span class="icon">🛡️</span>
+    <h4>Epidemiology & Sentinel Surveillance</h4>
+    <p>Designing anomaly detection pipelines using reproductive and performance indicators to flag herd deviations early — surveillance that protects both animal health and economic outcomes.</p>
+  </div>
 
-  <a class="proj-card" href="meta_rl/index.qmd">
-    <span class="proj-body proj-llm">
-      <img src="meta_rl/meta_rl.png" alt="Meta RL">
-      <strong>Meta-RL for Efficiency</strong><br>
-      Leverage meta-reasoning to accelerate learning in low-data, high-variance scenarios.
-    </span>
-  </a>
-
-</div>
-
-<!-- Group: Vision-Simulation Integration -->
-
-<div class="group-label">Vision-Simulation Integration</div>
-
-<div class="proj-grid">
-
-  <a class="proj-card" href="carla/index.qmd">
-    <span class="proj-body proj-llm">
-      <img src="carla/carla.png" alt="Perception Control">
-      <strong>Perception-Control Fusion</strong><br>
-      Use CARLA and AirSim to train end-to-end systems in visual RL tasks with sensors.
-    </span>
-  </a>
-
-  <a class="proj-card" href="multimodal/index.qmd">
-    <span class="proj-body proj-llm">
-      <img src="multimodal/multimodal.png" alt="Multimodal Fusion">
-      <strong>Multi-modal Representations</strong><br>
-      Combine visual, state, and contextual features for better decision-making.
-    </span>
-  </a>
-
-</div>
-
-<!-- Group: LLM-Augmented Decision Systems -->
-
-<div class="group-label">LLM-Augmented Decision Systems</div>
-
-<div class="proj-grid">
-
-  <a class="proj-card" href="llm_control/index.qmd">
-    <span class="proj-body proj-llm">
-      <img src="llm_control/llm_control.png" alt="LLM-guided control">
-      <strong>LLM-Guided Control</strong><br>
-      Translate natural language into actionable policies for real-world environments.
-    </span>
-  </a>
+  <div class="rp-pillar p5">
+    <span class="icon">🧬</span>
+    <h4>One Health & Antimicrobial Stewardship</h4>
+    <p>Bridging animal production, food safety, and public health through resistance profiling, milk quality analytics, and evidence-based frameworks for antimicrobial use on-farm.</p>
+  </div>
 
 </div>
 ```
 
+## Active Research Projects {#active-projects}
+
+```{=html}
+<div class="rp-section-chip">⚙️ Current & Recent Projects</div>
+
+<div class="rp-projects">
+
+  <div class="rp-project col-teal">
+    <div class="proj-tag">PhD Dissertation · Swine Efficiency</div>
+    <h4>Applied Data Analytics for Breeding Herd Efficiency in Commercial Swine Production</h4>
+    <p>A longitudinal, multi-parity analysis of sow performance trajectories to identify biological and management drivers of farrowing success, retention, and lifetime economic return. Uses mixed models, survival analysis, and ML classifiers on commercial herd data.</p>
+    <span class="proj-status status-active">● Active — Exp. 2027</span>
+  </div>
+
+  <div class="rp-project col-green">
+    <div class="proj-tag">Funded · Pig Livability Grant</div>
+    <h4>Predicting Farrowing Success to Inform Breeding Decisions</h4>
+    <p>Building ML models that classify risk of farrowing failure at the individual sow level prior to breeding — enabling producers to make proactive, data-backed decisions rather than reactive post-failure ones. Presented at AI in Veterinary Medicine Symposium (2026).</p>
+    <span class="proj-status status-funded">● Funded · $30,000</span>
+  </div>
+
+  <div class="rp-project col-amber">
+    <div class="proj-tag">Funded · Pig Livability Grant</div>
+    <h4>Early Identification of High-Risk Piglets in Commercial Swine Systems</h4>
+    <p>Developing algorithms to flag at-risk piglets in the first days of life using routinely collected production indicators. Targets mortality reduction by shifting from reactive intervention to early, targeted management.</p>
+    <span class="proj-status status-funded">● Funded · $30,000</span>
+  </div>
+
+  <div class="rp-project col-navy">
+    <div class="proj-tag">Funded · ISU VPR</div>
+    <h4>Precision Sow Management System (PSMS)</h4>
+    <p>A platform integrating real-time production data with predictive modeling to support breeding, nutrition, and culling decisions at scale. Connects multiple analytical modules into a unified decision-support framework for commercial operations.</p>
+    <span class="proj-status status-funded">● Funded · $50,000</span>
+  </div>
+
+  <div class="rp-project col-purple">
+    <div class="proj-tag">Under Review · USDA-CARE</div>
+    <h4>Unravelling Predictors of Sow Retention, Productivity & Profitability</h4>
+    <p>A comprehensive study linking parity-level performance metrics, management variables, and economic indicators to identify what actually drives long-term sow value — and what separates a sustainable producer from a struggling one.</p>
+    <span class="proj-status status-active">● Under Review · $300,000</span>
+  </div>
+
+  <div class="rp-project col-teal">
+    <div class="proj-tag">Real-Time Surveillance · Pig Livability</div>
+    <h4>Mortality Surveillance System for Wean-to-Finish Lots</h4>
+    <p>Building real-time anomaly detection pipelines that use mortality patterns and health indicators to flag emerging disease events — transforming reactive loss reporting into proactive herd health intelligence.</p>
+    <span class="proj-status status-funded">● Funded · $30,000</span>
+  </div>
+
+</div>
+```
 
 ## Publications {#publications}
 
-::: {.panel-tabset}
-
-### Journal Papers
 ```{=html}
-<h3 style="
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:.8rem;
-">
-  <span>Journal Papers</span>
+<div class="rp-section-chip">📄 Peer-Reviewed Publications</div>
 
-  <span style="
-    padding:4px 14px;                 /* bigger */
-    border:1.5px solid #cfd8e3;       /* softer border */
-    border-radius:999px;
-    font-size:0.95rem;                /* slightly larger text */
-    color:#1f3a5f;                    /* calm professional blue */
-    background:#f5f9ff;               /* subtle background */
-    margin-left:auto;                 /* pushes fully right */
-  ">
-    Total: <strong style="margin-left:4px;">2</strong>
-  </span>
-</h3>
+<ul class="rp-pub-list">
 
-<style>
-  .paper-title {
-    color: #0077cc;        /* professional blue for titles */
-    font-weight: 600;
-  }
-  .author-me {
-    color: #228B22;        /* same blue for your name */
-    font-weight: 600;
-  }
-</style>
-
-<ol reversed>
-<li>
-  Arif Hussian, <span class="author-me">Kundan Kumar</span>, Gelli Ravikumar<br>
-
-  <span>
-    Bayesian-optimized bidirectional long-short-term memory network for wind power forecasting with uncertainty quantification
-  </span>,
-  <em>Electric Power Systems Research</em>, 2026<br>
-
-  <span class="paper-actions">
-    <a class="pub-btn pub-paper"
-       href="https://www.sciencedirect.com/science/article/pii/S037877962500848X"
-       target="_blank" rel="noopener">
-      Paper
-    </a>
-
-    <a class="pub-btn pub-code"
-       href="#"
-       target="_blank" rel="noopener">
-      Code
-    </a>
-
-    <a class="pub-btn pub-poster"
-       href="#"
-       target="_blank" rel="noopener">
-      ️Poster
-    </a>
-  </span>
-</li>
-
-
-<li>
-  <span class="author-me">Kundan Kumar</span>, Gelli Ravikumar<br>
-
-  <span>
-    Physics-based Deep Reinforcement Learning for Grid-Resilient Volt-VAR Control
-  </span> (Under Review),
-  <em>IEEE Transactions on Smart Grid</em>, 2025<br>
-
-  <span class="paper-actions">
-    <a class="pub-btn pub-paper"
-       href=""
-       target="_blank" rel="noopener">
-      Paper
-    </a>
-
-    <a class="pub-btn pub-code"
-       href="#"
-       target="_blank" rel="noopener">
-      Code
-    </a>
-
-    <a class="pub-btn pub-poster"
-       href="#"
-       target="_blank" rel="noopener">
-       Poster
-    </a>
-  </span>
-</li>
-
-
-</ol>
-<!-- toggle button -->
-<div style="text-align:center;margin-top:.5rem;">
-  <button onclick="toggleConfPapers()" style="
-    padding:6px 14px;
-    font-size:.85rem;
-    background:#f1f1f1;
-    color:#333;
-    border:1px solid #aaa;
-    border-radius:6px;
-    cursor:pointer;">
-    Show More
-  </button>
-</div>
-
-<script>
-function toggleConfPapers(){
-  const section=document.getElementById('conf-more');
-  const btn=event.target;
-  if(section.style.display==='none'){
-    section.style.display='block';
-    btn.textContent='Show Less';
-  }else{
-    section.style.display='none';
-    btn.textContent='Show More';
-  }
-}
-</script>
-
-```
-
-### Conference Papers
-
-```{=html}
-<h3 style="
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:.8rem;
-">
-  <span>Conference Papers</span>
-
-  <span style="
-    padding:4px 14px;                 /* bigger */
-    border:1.5px solid #cfd8e3;       /* softer border */
-    border-radius:999px;
-    font-size:0.95rem;                /* slightly larger text */
-    color:#1f3a5f;                    /* calm professional blue */
-    background:#f5f9ff;               /* subtle background */
-    margin-left:auto;                 /* pushes fully right */
-  ">
-    Total: <strong style="margin-left:4px;">7</strong>
-  </span>
-</h3>
-
-<style>
-  .paper-actions{
-    display:inline-flex;
-    gap:8px;
-    flex-wrap:wrap;
-    margin-top:6px;
-  }
-
-  .pub-btn{
-    display:inline-flex;
-    align-items:center;
-    gap:6px;
-    padding:6px 12px;
-    border-radius:10px;
-    border:1.8px solid currentColor;
-    text-decoration:none;
-    font-size:.86rem;
-    font-weight:600;
-    line-height:1;
-    background:transparent;
-    transition: color .15s ease, background-color .15s ease, box-shadow .15s ease;
-  }
-
-  .pub-btn:hover{
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  }
-
-  /* ===== Button types ===== */
-
-  .pub-paper{ color:#1f5fbf; }
-  .pub-paper:hover{
-    color:#174a94;                      /* darker blue */
-    background: rgba(31,95,191,0.08);
-  }
-
-  .pub-code{ color:#1f8f4d; }
-  .pub-code:hover{
-    color:#166b39;                      /* darker green */
-    background: rgba(31,143,77,0.08);
-  }
-
-  .pub-pres{ color:#d93025; }
-  .pub-pres:hover{
-    color:#a61f18;                      /* darker red */
-    background: rgba(217,48,37,0.08);
-  }
-
-  .pub-poster{ color:#7b4fd6; }
-  .pub-poster:hover{
-    color:#5f3fb0;                      /* darker purple */
-    background: rgba(123,79,214,0.08);
-  }
-</style>
-
-
-<ol reversed>
   <li>
-    <span class="author-me">Kundan Kumar</span>, Gelli Ravikumar<br>
-
-    <span>
-      A Multi-Objective Optimization Framework for Carbon-Aware Smart Energy Management
-    </span>,
-    IEEE North American Power Symposium (NAPS), 2025<br>
-
-    <span class="paper-actions">
-      <a class="pub-btn pub-paper"
-         href="YOUR_PAPER_LINK"
-         target="_blank" rel="noopener">
-        Paper
-      </a>
-
-      <a class="pub-btn pub-pres"
-         href="YOUR_SLIDES_LINK"
-         target="_blank" rel="noopener">
-        Presentation
-      </a>
-    </span>
+    <div style="display:flex; align-items:flex-start; gap:10px;">
+      <span class="pub-num">5</span>
+      <div>
+        <div class="pub-authors">
+          <span class="pub-me">Kirwa, E.</span>, Peterson, B., Grohmann, C. J., Silva, G. S., Ulguim, R. R., Mellagi, A. P., &amp; Frizzo, M.
+        </div>
+        <div class="pub-title">Assessment of the relationship between lactation feeding patterns, litter performance measures, and sow characteristics on sow farrowing efficiency metrics.</div>
+        <div class="pub-journal">Journal of Animal Science, 2025 · 103(Supplement_1), 50–52</div>
+        <div class="pub-actions">
+          <a class="pub-btn btn-doi" href="https://doi.org/10.1093/jas/skaf102.055" target="_blank">DOI ↗</a>
+        </div>
+      </div>
+    </div>
   </li>
 
-<li>
-  <span class="author-me">Kundan Kumar</span>, Kumar Utkarsh, Wang Jiyu, Padullaparti Harsha<br>
+  <li>
+    <div style="display:flex; align-items:flex-start; gap:10px;">
+      <span class="pub-num">4</span>
+      <div>
+        <div class="pub-authors">
+          Musskopf, M.; Peterson, T.; Machado, I.; Tran Pham Tien, T.; <span class="pub-me">Kirwa, E.</span>; et al.
+        </div>
+        <div class="pub-title">Assessment of the Relationship Between Bioexclusion Practices Applied in Wean-to-Harvest Sites and PRRS Outbreaks.</div>
+        <div class="pub-journal">Veterinary Sciences, 2025 · 12, 1000</div>
+        <div class="pub-actions">
+          <a class="pub-btn btn-doi" href="https://doi.org/10.3390/vetsci12101000" target="_blank">DOI ↗</a>
+        </div>
+      </div>
+    </div>
+  </li>
 
-  <span>
-    Advanced Semi-Supervised Learning With Uncertainty Estimation for Phase Identification in Distribution Systems
-  </span>,
-  IEEE PES General Meeting, 2025<br>
+  <li>
+    <div style="display:flex; align-items:flex-start; gap:10px;">
+      <span class="pub-num">3</span>
+      <div>
+        <div class="pub-authors">
+          <span class="pub-me">Kirwa E</span>, Tangen J., Vargas L.B., Musskopf M., et al.
+        </div>
+        <div class="pub-title">Dynamics of PRRSV Seroconversion and immune-modulating properties of tilmicosin during naive gilt exposure to PRRS LVI.</div>
+        <div class="pub-journal">In preparation · 2025</div>
+      </div>
+    </div>
+  </li>
 
-  <span class="paper-actions">
-    <a class="pub-btn pub-paper"
-       href="YOUR_PAPER_LINK"
-       target="_blank" rel="noopener">
-      Paper
-    </a>
+  <li>
+    <div style="display:flex; align-items:flex-start; gap:10px;">
+      <span class="pub-num">2</span>
+      <div>
+        <div class="pub-authors">
+          <span class="pub-me">Kirwa, E.</span>, Aboge G. O., Maitho, T. E., Mbindyo, C. M., Abuom, T. O., &amp; Mainga, A. O.
+        </div>
+        <div class="pub-title">Antibiotic profile of <em>Staphylococcus aureus</em> and Coagulase negative <em>Staphylococci</em> from raw camel milk from Garissa County, Kenya.</div>
+        <div class="pub-journal">East African Journal of Science, Technology and Innovation, 2021 · 2(4)</div>
+        <div class="pub-actions">
+          <a class="pub-btn btn-doi" href="https://doi.org/10.37425/eajsti.v2i4.364" target="_blank">DOI ↗</a>
+        </div>
+      </div>
+    </div>
+  </li>
 
-    <a class="pub-btn pub-pres"
-       href="/misc/info/presentations/SSL_PESGM_presentation.pdf"
-       target="_blank" rel="noopener">
-      Presentation
-    </a>
+  <li>
+    <div style="display:flex; align-items:flex-start; gap:10px;">
+      <span class="pub-num">1</span>
+      <div>
+        <div class="pub-authors">
+          Bahati D., Makau D., <span class="pub-me">Kirwa E.</span> &amp; Mutura J.
+        </div>
+        <div class="pub-title">An assessment on community perspectives and views on natural resource management and its implications to biodiversity conservation.</div>
+        <div class="pub-journal">ResearchGate, 2019</div>
+        <div class="pub-actions">
+          <a class="pub-btn btn-doi" href="http://dx.doi.org/10.13140/RG.2.2.10344.34566" target="_blank">DOI ↗</a>
+        </div>
+      </div>
+    </div>
+  </li>
 
-    <a class="pub-btn pub-poster"
-       href="/misc/info/posters/SSL_PESGM_poster.pdf"
-       target="_blank" rel="noopener">
-       Poster
-    </a>
-  </span>
-</li>
+</ul>
 
-<li>
-  <span class="author-me">Kundan Kumar</span>, Gelli Ravikumar<br>
-
-  <span>
-    Transfer Learning Enhanced Deep Reinforcement Learning for Volt-Var Control in Smart Grids
-  </span>,
-  IEEE PES Grid Edge Technologies Conference & Exposition, 2025<br>
-
-  <span class="paper-actions">
-    <a class="pub-btn pub-paper"
-       href="https://arxiv.org/abs/2202.13541"
-       target="_blank" rel="noopener">
-      Paper
-    </a>
-
-    <a class="pub-btn pub-poster"
-       href="#"
-       target="_blank" rel="noopener">
-       Poster
-    </a>
-  </span>
-</li>
-
-
-  <!-- start collapsible -->
-  <div id="conf-more" style="display:none;">
-
-<li>
-  <span class="author-me">Kundan Kumar</span>, Aditya Akilesh Mantha, Gelli Ravikumar<br>
-
-  <span>
-    Bayesian Optimization for Deep Reinforcement Learning in Robust Volt-Var Control
-  </span>,
-  IEEE PES General Meeting, 2024<br>
-
-  <span class="paper-actions">
-    <a class="pub-btn pub-paper"
-       href="https://arxiv.org/abs/2202.13541"
-       target="_blank" rel="noopener">
-      Paper
-    </a>
-
-    <a class="pub-btn pub-poster"
-       href="#"
-       target="_blank" rel="noopener">
-       Poster
-    </a>
-  </span>
-</li>
-
- <li>
-  <span class="author-me">Kundan Kumar</span>, Gelli Ravikumar<br>
-
-  <span>
-    Deep RL-based Volt-VAR Control and Attack Resiliency for DER-Integrated Distribution Grids
-  </span>,
-  IEEE Innovative Smart Grid Technologies (ISGT), 2024<br>
-
-  <span class="paper-actions">
-    <a class="pub-btn pub-paper"
-       href="https://ieeexplore.ieee.org/document/10454163"
-       target="_blank" rel="noopener">
-      Paper
-    </a>
-
-    <a class="pub-btn pub-poster"
-       href="#"
-       target="_blank" rel="noopener">
-       Poster
-    </a>
-  </span>
-</li>
-
-
-<li>
-  JK Francis, C Kumar, J Herrera-Gerena, <span class="author-me">Kundan Kumar</span>, MJ Darr<br>
-
-  <span>
-    Deep Learning and Pattern-based Methodology for Multivariable Sensor Data Regression
-  </span>,
-  IEEE ICMLA, 2022<br>
-
-  <span class="paper-actions">
-    <a class="pub-btn pub-paper"
-       href="https://ieeexplore.ieee.org/document/10069730"
-       target="_blank" rel="noopener">
-      Paper
-    </a>
-  </span>
-</li>
-
-
-<li>
-  Kin Gwn Lore, Nicholas Sweet, <span class="author-me">Kundan Kumar</span>, N Ahmed, S Sarkar<br>
-
-  <span>
-    Deep Value of Information Estimators for Collaborative Human-Machine Information Gathering
-  </span>,
-  ACM/IEEE ICCPS, 2016<br>
-
-  <span class="paper-actions">
-    <a class="pub-btn pub-paper"
-       href="https://arxiv.org/abs/1512.07592"
-       target="_blank" rel="noopener">
-      Paper
-    </a>
-  </span>
-</li>
-
-
-  </div>
-</ol>
-
-<!-- toggle button -->
-<div style="text-align:center;margin-top:.5rem;">
-  <button onclick="toggleConfPapers()" style="
-    padding:6px 14px;
-    font-size:.85rem;
-    background:#f1f1f1;
-    color:#333;
-    border:1px solid #aaa;
-    border-radius:6px;
-    cursor:pointer;">
-    Show More
-  </button>
-</div>
-
-<script>
-function toggleConfPapers(){
-  const section=document.getElementById('conf-more');
-  const btn=event.target;
-  if(section.style.display==='none'){
-    section.style.display='block';
-    btn.textContent='Show Less';
-  }else{
-    section.style.display='none';
-    btn.textContent='Show More';
-  }
-}
-</script>
+<p style="text-align:center; margin-top:0.5rem;">
+  <a href="/publications/" style="color:#E67E22; font-weight:600; text-decoration:none;">
+    View full publications list →
+  </a>
+</p>
 ```
 
-:::
+## Presentations & Talks {#presentations}
 
-## Ongoing Projects {#ongoing-projects}
+```{=html}
+<div class="rp-section-chip">🎤 Selected Presentations</div>
 
-- Federated DRL for Cyber-Resilient Volt-VAR Optimization  
-  Decentralized, communication-efficient control using LSTM-enhanced PPO agents across distributed DERs.
+<div class="rp-timeline">
 
-- One-Shot Policy Transfer with Physics Priors  
-  Train agents on small topologies and adapt to IEEE 123-bus, 8500-node networks in a few iterations.
+  <div class="rp-timeline-item">
+    <div class="tl-year">May 2026</div>
+    <div class="tl-title">Predicting Farrowing Success to Inform Breeding Decisions in Commercial Swine Herds <span class="tl-type type-oral">Oral</span></div>
+    <div class="tl-venue">Symposium on AI in Veterinary Medicine · Ithaca, NY</div>
+  </div>
 
-- LLM-Guided Autonomous Planning for Smart Buildings  
-  Convert user prompts to interpretable control policies using LLMs (OpenAI, Claude) in CityLearn environments.
+  <div class="rp-timeline-item">
+    <div class="tl-year">March 2026</div>
+    <div class="tl-title">Leveraging Machine Learning to Predict Subsequent Farrowing Success <span class="tl-type type-oral">Oral</span></div>
+    <div class="tl-venue">American Society of Animal Science Midwest · Omaha, NE</div>
+  </div>
 
+  <div class="rp-timeline-item">
+    <div class="tl-year">March 2026</div>
+    <div class="tl-title">Factors Associated with Gilt Retention in Breeding Herds <span class="tl-type type-oral">Oral</span></div>
+    <div class="tl-venue">American Society of Animal Science · Omaha, NE</div>
+  </div>
+
+  <div class="rp-timeline-item">
+    <div class="tl-year">Feb 2026</div>
+    <div class="tl-title">Using Field Data to Identify Drivers of Gilt Retention and Lifetime Productivity <span class="tl-type type-invited">Invited</span></div>
+    <div class="tl-venue">The Robust Pig Seminar · PIC</div>
+  </div>
+
+  <div class="rp-timeline-item">
+    <div class="tl-year">2025</div>
+    <div class="tl-title">Factors Associated with Gilt Retention <span class="tl-type type-oral">Oral</span></div>
+    <div class="tl-venue">International Conference on Pig Livability · Omaha, NE</div>
+  </div>
+
+  <div class="rp-timeline-item">
+    <div class="tl-year">Spring 2025</div>
+    <div class="tl-title">Linking Lactation Feeding Patterns, Litter Performance, and Sow Characteristics to Sow Efficiency Metrics <span class="tl-type type-invited">Invited</span></div>
+    <div class="tl-venue">Benchmark Magazine · PigCHAMP, Spring 2025 pp. 6–7</div>
+  </div>
+
+  <div class="rp-timeline-item">
+    <div class="tl-year">2025</div>
+    <div class="tl-title">Practical Strategies to Maximize Sow Efficiency <span class="tl-type type-invited">Invited</span></div>
+    <div class="tl-venue">National Hog Farmer</div>
+  </div>
+
+  <div class="rp-timeline-item">
+    <div class="tl-year">2023</div>
+    <div class="tl-title">One Health Concept — The Kenyan Perspective <span class="tl-type type-oral">Oral</span></div>
+    <div class="tl-venue">Mandela Washington Fellowship Conference · Minneapolis, MN</div>
+  </div>
+
+  <div class="rp-timeline-item">
+    <div class="tl-year">2022</div>
+    <div class="tl-title">Phenotypic Characterization of Antimicrobial-Resistant <em>S. aureus</em> <span class="tl-type type-poster">Poster</span></div>
+    <div class="tl-venue">ESCMID/ASM Conference · Dublin, Ireland</div>
+  </div>
+
+  <div class="rp-timeline-item">
+    <div class="tl-year">2021</div>
+    <div class="tl-title">How Safe is Our Milk on the Shelf? <span class="tl-type type-oral">Oral</span></div>
+    <div class="tl-venue">Kenya One Health Conference · ILRI, Nairobi</div>
+  </div>
+
+</div>
+```
+
+## Research Funding {#funding}
+
+```{=html}
+<div class="rp-section-chip">💰 Grant Funding</div>
+
+<p style="color:#5D6D7E; font-size:0.9rem; margin-bottom:1rem;">Awarded: <strong style="color:#1B4F72;">$110,000</strong> &nbsp;|&nbsp; Under Review: <strong style="color:#8E44AD;">$300,000</strong></p>
+
+<div class="rp-grants">
+
+  <div class="rp-grant">
+    <div class="funder">Pig Livability · Awarded</div>
+    <div class="amount">$30,000</div>
+    <h4>Real-Time Surveillance System for Mortality in Wean-to-Finish Lots</h4>
+  </div>
+
+  <div class="rp-grant">
+    <div class="funder">Pig Livability · Awarded</div>
+    <div class="amount">$30,000</div>
+    <h4>Early Identification of High-Risk Piglets in Commercial Swine Systems</h4>
+  </div>
+
+  <div class="rp-grant">
+    <div class="funder">ISU VPR · Awarded</div>
+    <div class="amount">$50,000</div>
+    <h4>Precision Sow Management System (PSMS)</h4>
+  </div>
+
+  <div class="rp-grant pending">
+    <div class="funder">USDA-CARE · Under Review</div>
+    <div class="amount">$300,000</div>
+    <h4>Improving Breeding Herd Efficiency by Unravelling Predictors of Sow Retention, Productivity and Profitability</h4>
+  </div>
+
+</div>
+```
