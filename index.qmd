@@ -1,6 +1,6 @@
 ---
 title: "Elly Kirwa"
-subtitle: "Graduate Research Assistant | PhD Student | Epidemiology & Applied Data Science"
+subtitle: "Epidemiology | Data Analytics & Modeling | One Health | Machine Learning | Business Analytics | Operational Efficiency"
 image: misc/info/photo.png
 
 about:
