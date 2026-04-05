@@ -669,3 +669,128 @@ hr {
   }
   .ek-reveal { opacity: 1 !important; transform: none !important; }
 }
+
+/* ============================================================
+   BLOG LISTING — rich card rows
+   ============================================================ */
+.quarto-listing-container-default { max-width: 860px; }
+
+.quarto-post {
+  display: flex !important;
+  gap: 0 !important;
+  background: white !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  margin-bottom: 1.2rem !important;
+  box-shadow: 0 3px 16px rgba(27,79,114,0.09) !important;
+  border: none !important;
+  border-left: 5px solid var(--ek-teal) !important;
+  transition: transform 0.22s ease, box-shadow 0.22s ease !important;
+}
+.quarto-post:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 28px rgba(27,79,114,0.16) !important;
+}
+.quarto-post:nth-child(2) { border-left-color: var(--ek-sky) !important; }
+.quarto-post:nth-child(3) { border-left-color: var(--ek-green) !important; }
+.quarto-post:nth-child(4) { border-left-color: var(--ek-amber) !important; }
+.quarto-post:nth-child(5) { border-left-color: #8E44AD !important; }
+
+.quarto-post .body { padding: 1.1rem 1.3rem !important; flex: 1 !important; }
+.quarto-post .metadata { padding: 1.1rem 1rem 1.1rem 0 !important; display: flex !important; align-items: center !important; }
+
+.quarto-post .listing-title a {
+  color: var(--ek-navy) !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  line-height: 1.35 !important;
+  text-decoration: none !important;
+}
+.quarto-post .listing-title a:hover { color: var(--ek-teal) !important; }
+
+.quarto-post .listing-description,
+.quarto-post .delink.listing-description { color: #4A5568 !important; font-size: 0.86rem !important; line-height: 1.6 !important; margin-top: 0.3rem !important; }
+.quarto-post .listing-description a { color: inherit !important; text-decoration: none !important; }
+
+.listing-category {
+  background: var(--ek-bg2) !important;
+  color: var(--ek-teal) !important;
+  border: 1px solid rgba(20,143,119,0.3) !important;
+  border-radius: 20px !important;
+  font-size: 0.68rem !important;
+  font-weight: 600 !important;
+  padding: 2px 9px !important;
+  margin: 0 4px 4px 0 !important;
+  cursor: pointer !important;
+  transition: background 0.15s, color 0.15s !important;
+  display: inline-block !important;
+}
+.listing-category:hover { background: var(--ek-teal) !important; color: white !important; }
+
+.listing-date {
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  color: var(--ek-text-muted) !important;
+  white-space: nowrap !important;
+  writing-mode: vertical-rl !important;
+  text-orientation: mixed !important;
+  letter-spacing: 0.04em !important;
+}
+
+/* category sidebar */
+.quarto-listing-category .category {
+  padding: 4px 10px !important;
+  border-radius: 20px !important;
+  font-size: 0.8rem !important;
+  cursor: pointer !important;
+  transition: background 0.15s, color 0.15s !important;
+  color: var(--ek-text-muted) !important;
+}
+.quarto-listing-category .category:hover,
+.quarto-listing-category .category.active {
+  background: var(--ek-teal) !important;
+  color: white !important;
+}
+.quarto-listing-category-title {
+  color: var(--ek-navy) !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* ============================================================
+   PUBLICATIONS PAGE
+   ============================================================ */
+.pub-title-link {
+  font-weight: 700 !important;
+  font-size: 0.97rem !important;
+  color: var(--ek-navy) !important;
+  transition: color 0.15s !important;
+}
+.pub-title-link:hover { color: var(--ek-teal) !important; }
+
+/* ============================================================
+   ABOUT PAGE
+   ============================================================ */
+.about-body p {
+  font-size: 0.97rem !important;
+  line-height: 1.85 !important;
+}
+
+/* ============================================================
+   PAGE TITLES — gradient accent line below
+   ============================================================ */
+.quarto-title .title {
+  position: relative !important;
+  padding-bottom: 0.5rem !important;
+}
+.quarto-title .title::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0; left: 0 !important;
+  width: 60px; height: 3px !important;
+  background: linear-gradient(90deg, var(--ek-teal), var(--ek-sky-light)) !important;
+  border-radius: 3px !important;
+}

@@ -419,181 +419,331 @@ window.Quarto = {
 
 </header>
 
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">CV</li>
-  </ol>
-</nav>
+<style>
+/* ── CV Page Enhancements ── */
+.cv-hero {
+  background: linear-gradient(135deg, #1B4F72 0%, #148F77 100%);
+  border-radius: 14px;
+  padding: 2rem 2.2rem;
+  color: white;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.cv-hero h2 { color: white !important; border: none !important; font-size: 1.6rem !important; margin: 0 0 0.3rem 0 !important; }
+.cv-hero p  { color: rgba(255,255,255,0.85); margin: 0; font-size: 0.92rem; max-width: 500px; }
+.cv-dl-btns { display: flex; gap: 0.7rem; flex-wrap: wrap; }
+.cv-dl-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 9px 18px; border-radius: 8px; font-weight: 600;
+  font-size: 0.85rem; text-decoration: none !important;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+.cv-dl-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.25); color: white !important; }
+.cv-dl-btn.navy  { background: rgba(255,255,255,0.18); color: white !important; border: 1.5px solid rgba(255,255,255,0.4); }
+.cv-dl-btn.green { background: #1E8449; color: white !important; border: none; }
 
-<div style="display:flex; gap:1rem; margin-bottom:2rem; flex-wrap:wrap;">
-  <a href="misc/info/Elly_Kirwa_CV.pdf" download style="display:inline-flex; align-items:center; gap:0.5rem; background:#1e567d; color:#fff; padding:10px 20px; border-radius:6px; text-decoration:none; font-weight:600;">
-    <i class="bi bi-download"></i> Download CV (PDF)
-  </a>
-  <a href="misc/info/Elly_Kirwa_Resume.pdf" download style="display:inline-flex; align-items:center; gap:0.5rem; background:#28a745; color:#fff; padding:10px 20px; border-radius:6px; text-decoration:none; font-weight:600;">
-    <i class="bi bi-download"></i> Download Resume (PDF)
-  </a>
+/* section chips */
+.cv-chip {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: linear-gradient(135deg, #1B4F72, #148F77);
+  color: white !important; padding: 5px 20px;
+  border-radius: 30px; font-size: 0.82rem; font-weight: 700;
+  letter-spacing: 0.06em; margin: 1.8rem 0 1rem 0;
+  box-shadow: 0 3px 10px rgba(27,79,114,0.18);
+}
+
+/* edu timeline */
+.cv-edu-timeline { position: relative; padding-left: 1.8rem; }
+.cv-edu-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 6px; bottom: 6px;
+  width: 2px; background: linear-gradient(to bottom, #148F77, #AED6F1); border-radius: 2px;
+}
+.cv-edu-item { position: relative; margin-bottom: 1.4rem; }
+.cv-edu-item::before {
+  content: ''; position: absolute; left: -1.55rem; top: 6px;
+  width: 11px; height: 11px; border-radius: 50%;
+  background: #148F77; border: 2px solid white;
+  box-shadow: 0 0 0 2px #148F77;
+}
+.cv-edu-degree {
+  font-weight: 700; color: #1B4F72; font-size: 0.96rem;
+}
+.cv-edu-school { color: #5D6D7E; font-size: 0.84rem; }
+.cv-edu-date {
+  display: inline-block; font-size: 0.7rem; font-weight: 700;
+  padding: 2px 10px; border-radius: 20px;
+  background: #EBF5FB; color: #1B4F72;
+  margin-left: 8px; vertical-align: middle;
+}
+.cv-edu-note { font-size: 0.82rem; color: #148F77; font-style: italic; margin-top: 2px; }
+
+/* skill bars */
+.cv-skills-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.9rem; margin-bottom: 1rem;
+}
+.cv-skill { }
+.cv-skill-name { font-size: 0.82rem; font-weight: 600; color: #1B4F72; margin-bottom: 4px; }
+.cv-skill-track { background: #D6EAF8; border-radius: 20px; height: 7px; overflow: hidden; }
+.cv-skill-fill {
+  height: 100%; border-radius: 20px;
+  background: linear-gradient(90deg, #148F77, #2E86C1);
+  width: 0; transition: width 1.1s cubic-bezier(0.4,0,0.2,1);
+}
+.cv-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0.4rem; }
+.cv-tag {
+  font-size: 0.72rem; font-weight: 600;
+  padding: 3px 11px; border-radius: 20px;
+  border: 1.5px solid #148F77; color: #148F77;
+  background: rgba(20,143,119,0.06);
+}
+
+/* experience cards */
+.cv-exp-card {
+  background: white; border-radius: 12px;
+  padding: 1.2rem 1.4rem; margin-bottom: 1.1rem;
+  box-shadow: 0 3px 14px rgba(27,79,114,0.08);
+  border-left: 4px solid #148F77;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.cv-exp-card:hover { transform: translateY(-3px); box-shadow: 0 6px 22px rgba(27,79,114,0.14); }
+.cv-exp-card.kenya { border-left-color: #1E8449; }
+.cv-exp-card.one-health { border-left-color: #E67E22; }
+.cv-exp-card.tech { border-left-color: #8E44AD; }
+.cv-exp-header { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.3rem; align-items: flex-start; margin-bottom: 0.5rem; }
+.cv-exp-title { font-weight: 700; color: #1B4F72; font-size: 0.97rem; }
+.cv-exp-date { font-size: 0.7rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; background: #EBF5FB; color: #1B4F72; white-space: nowrap; }
+.cv-exp-org { font-size: 0.83rem; color: #148F77; font-style: italic; margin-bottom: 0.5rem; }
+.cv-exp-card ul { margin: 0; padding-left: 1.2rem; }
+.cv-exp-card li { font-size: 0.85rem; color: #2C3E50; margin-bottom: 3px; line-height: 1.55; }
+
+/* award badges */
+.cv-awards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.9rem; margin-bottom: 1rem; }
+.cv-award {
+  background: white; border-radius: 10px;
+  padding: 1rem 1.1rem;
+  box-shadow: 0 2px 10px rgba(27,79,114,0.08);
+  border-top: 3px solid #E67E22;
+  transition: transform 0.18s;
+  display: flex; gap: 0.7rem; align-items: flex-start;
+}
+.cv-award:hover { transform: translateY(-3px); }
+.cv-award.starred { border-top-color: #E67E22; }
+.cv-award.plain   { border-top-color: #AED6F1; }
+.cv-award-icon { font-size: 1.4rem; flex-shrink: 0; }
+.cv-award-text { font-size: 0.84rem; color: #2C3E50; line-height: 1.45; }
+.cv-award-text strong { color: #1B4F72; }
+
+/* grant mini cards */
+.cv-grants-row { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-bottom: 1rem; }
+.cv-grant-mini {
+  background: white; border-radius: 10px;
+  padding: 0.9rem 1.1rem; flex: 1 1 220px;
+  box-shadow: 0 2px 10px rgba(27,79,114,0.07);
+  border-top: 3px solid #E67E22;
+}
+.cv-grant-mini.pending { border-top-color: #8E44AD; }
+.cv-grant-mini .amt { font-size: 1.2rem; font-weight: 700; color: #E67E22; }
+.cv-grant-mini.pending .amt { color: #8E44AD; }
+.cv-grant-mini .funder { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: #5D6D7E; }
+.cv-grant-mini p { font-size: 0.8rem; color: #2C3E50; margin: 0.2rem 0 0 0; line-height: 1.4; }
+
+/* leadership */
+.cv-lead-list { list-style: none; padding: 0; }
+.cv-lead-list li {
+  padding: 0.55rem 0.9rem; margin-bottom: 0.5rem;
+  background: white; border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(27,79,114,0.07);
+  border-left: 3px solid #148F77;
+  font-size: 0.87rem; color: #2C3E50;
+}
+.cv-memberships {
+  background: #EBF5FB; border-radius: 10px;
+  padding: 0.9rem 1.1rem; font-size: 0.83rem; color: #2C3E50;
+  margin-top: 0.8rem; line-height: 1.7;
+}
+</style>
+
+<!-- CV HERO -->
+<div class="cv-hero">
+  <div>
+    <h2>Curriculum Vitae</h2>
+    <p>Veterinary epidemiologist · Data scientist · Swine production analytics · Iowa State University</p>
+  </div>
+  <div class="cv-dl-btns">
+    <a href="misc/info/Elly_Kirwa_CV.pdf" download class="cv-dl-btn navy"><i class="bi bi-download"></i> Download CV</a>
+    <a href="misc/info/Elly_Kirwa_Resume.pdf" download class="cv-dl-btn green"><i class="bi bi-download"></i> Download Resume</a>
+  </div>
 </div>
 
-<section id="professional-summary" class="level2">
-<h2>Professional Summary</h2>
-<p>Veterinary epidemiologist and data scientist with 5+ years of experience applying statistical analysis and machine learning to complex health and production data. Experienced in building efficient data pipelines, developing interactive tools, and translating analytical results into actionable insights that support improved animal health, operational performance, and profitability.</p>
-</section>
+<!-- SUMMARY -->
+<div class="cv-chip">👤 Professional Summary</div>
+<p style="font-size:0.96rem; color:#2C3E50; line-height:1.85; max-width:820px;">
+  Veterinary epidemiologist and applied data scientist with 5+ years of experience translating complex livestock production data into actionable insights. Expert in building predictive models, surveillance pipelines, and decision-support tools for commercial swine systems. PhD candidate at Iowa State University with $110K in awarded research funding and an active portfolio spanning longitudinal analysis, explainable ML, and production economics.
+</p>
 
-<hr>
+<!-- EDUCATION -->
+<div class="cv-chip">🎓 Education</div>
+<div class="cv-edu-timeline">
+  <div class="cv-edu-item">
+    <div class="cv-edu-degree">Ph.D. in Population Sciences in Animal Health <span class="cv-edu-date">Aug 2023 – Mar 2027 (Expected)</span></div>
+    <div class="cv-edu-school">Iowa State University · Ames, IA</div>
+    <div class="cv-edu-note">Dissertation: "Applied Data Analytics for Breeding Herd Efficiency in Commercial Swine Production"</div>
+    <div class="cv-edu-note" style="color:#2E86C1;">+ Graduate Certificate in Business Data Analytics (Jan–Dec 2026)</div>
+  </div>
+  <div class="cv-edu-item">
+    <div class="cv-edu-degree">M.Sc. in Veterinary Preventive Medicine <span class="cv-edu-date">Aug 2023 – Dec 2025</span></div>
+    <div class="cv-edu-school">Iowa State University · Ames, IA</div>
+  </div>
+  <div class="cv-edu-item">
+    <div class="cv-edu-degree">M.Sc. in Pharmacology &amp; Toxicology <span class="cv-edu-date">Sep 2018 – Sep 2022</span></div>
+    <div class="cv-edu-school">University of Nairobi · Nairobi, Kenya</div>
+  </div>
+  <div class="cv-edu-item">
+    <div class="cv-edu-degree">Doctor of Veterinary Medicine (DVM) <span class="cv-edu-date">Sep 2012 – Sep 2017</span></div>
+    <div class="cv-edu-school">University of Nairobi · Nairobi, Kenya</div>
+    <div class="cv-edu-note" style="color:#E67E22; font-style:normal; font-weight:600;">🏅 Graduated With Distinction · Best Overall Student</div>
+  </div>
+</div>
 
-<section id="education" class="level2">
-<h2>Education</h2>
-<p><strong>Ph.D. in Population Sciences in Animal Health</strong> <code>Aug 2023 – March 2027 (Expected)</code><br>
-Iowa State University (ISU), Ames, IA<br>
-<em>Dissertation: "Applied Data Analytics for Breeding Herd Efficiency in Commercial Swine Production"</em><br>
-Graduate Certificate: Business Data Analytics (Jan 2026 – Dec 2026)</p>
-<p><strong>M.Sc. in Veterinary Preventive Medicine</strong> <code>Aug 2023 – Dec 2025</code><br>
-Iowa State University (ISU), Ames, IA</p>
-<p><strong>M.Sc. in Pharmacology &amp; Toxicology</strong> <code>Sep 2018 – Sep 2022</code><br>
-University of Nairobi, Nairobi, Kenya</p>
-<p><strong>Doctor of Veterinary Medicine (DVM)</strong> <code>Sep 2012 – Sep 2017</code><br>
-University of Nairobi, Nairobi, Kenya — <em>With Distinction</em></p>
-</section>
+<!-- SKILLS -->
+<div class="cv-chip">⚡ Skills</div>
+<div class="cv-skills-grid" id="cv-skill-bars">
+  <div class="cv-skill"><div class="cv-skill-name">R (Statistics &amp; Modelling)</div><div class="cv-skill-track"><div class="cv-skill-fill" data-w="92%"></div></div></div>
+  <div class="cv-skill"><div class="cv-skill-name">Python (ML &amp; Pipelines)</div><div class="cv-skill-track"><div class="cv-skill-fill" data-w="88%"></div></div></div>
+  <div class="cv-skill"><div class="cv-skill-name">SAS (Statistical Analysis)</div><div class="cv-skill-track"><div class="cv-skill-fill" data-w="82%"></div></div></div>
+  <div class="cv-skill"><div class="cv-skill-name">SQL &amp; Data Engineering</div><div class="cv-skill-track"><div class="cv-skill-fill" data-w="78%"></div></div></div>
+  <div class="cv-skill"><div class="cv-skill-name">Machine Learning (XAI)</div><div class="cv-skill-track"><div class="cv-skill-fill" data-w="85%"></div></div></div>
+  <div class="cv-skill"><div class="cv-skill-name">Epidemiology &amp; Surveillance</div><div class="cv-skill-track"><div class="cv-skill-fill" data-w="90%"></div></div></div>
+</div>
+<div class="cv-tags" style="margin-top:0.6rem;">
+  <span class="cv-tag">Azure</span><span class="cv-tag">AWS</span><span class="cv-tag">DuckDB</span>
+  <span class="cv-tag">Survival Analysis</span><span class="cv-tag">Mixed Models</span><span class="cv-tag">PCR / WGS</span>
+  <span class="cv-tag">HPLC / GC</span><span class="cv-tag">Clinical Trials</span>
+</div>
 
-<hr>
+<!-- EXPERIENCE -->
+<div class="cv-chip">💼 Professional Experience</div>
 
-<section id="skills" class="level2">
-<h2>Skills</h2>
-<ul>
-<li><strong>Programming:</strong> R, Python, SQL, SAS</li>
-<li><strong>Machine Learning:</strong> Supervised/Unsupervised Learning, Deep Learning, Natural Language Processing</li>
-<li><strong>Data Engineering:</strong> Feature Engineering, Large-Scale Data Processing, Data Cleaning</li>
-<li><strong>Epidemiology:</strong> Epidemiological studies and clinical trials</li>
-<li><strong>Cloud Services:</strong> Microsoft Azure, DuckDB, AWS</li>
-<li><strong>Molecular Techniques:</strong> PCR, DNA extraction, whole genome sequencing</li>
-<li><strong>Toxicology:</strong> HPLC, gas chromatography (GC), spectroscopy</li>
-<li><strong>Clifton Strengths:</strong> Strategic, Learner, Achiever, Responsibility</li>
+<div class="cv-exp-card">
+  <div class="cv-exp-header">
+    <div class="cv-exp-title">Data Analytics Research Assistant</div>
+    <div class="cv-exp-date">Aug 2023 – Present</div>
+  </div>
+  <div class="cv-exp-org">Iowa State University · Ames, IA</div>
+  <ul>
+    <li>Designing algorithms and predictive models to improve breeding herd efficiency in commercial swine systems</li>
+    <li>Python, R, and SAS for complex sow-level longitudinal analysis, benchmark dashboards, and disease surveillance</li>
+    <li>Designing and executing field trials assessing the impact of vaccination and management programs</li>
+  </ul>
+</div>
+
+<div class="cv-exp-card kenya">
+  <div class="cv-exp-header">
+    <div class="cv-exp-title">Veterinarian &amp; Research Manager</div>
+    <div class="cv-exp-date">June 2018 – May 2023</div>
+  </div>
+  <div class="cv-exp-org">Stanley &amp; Son Limited · Salama, Kenya</div>
+  <ul>
+    <li>Introduced production-guided data analysis and a Farm Management System for evidence-based herd efficiency</li>
+    <li>Built an antimicrobial surveillance platform and policy framework for farm-level food safety</li>
+    <li>Full clinical management: diagnosis, surgery, post-mortems, disease control, and staff supervision</li>
+  </ul>
+</div>
+
+<div class="cv-exp-card one-health">
+  <div class="cv-exp-header">
+    <div class="cv-exp-title">Veterinary Intern — Wildlife &amp; Community Health</div>
+    <div class="cv-exp-date">June 2017 – May 2018</div>
+  </div>
+  <div class="cv-exp-org">Africa Network for Animal Welfare · Nairobi, Kenya</div>
+  <ul>
+    <li>Wildlife veterinary emergencies, field surgeries, and desnaring across national parks and conservancies</li>
+    <li>Led spay/neuter campaigns (~330 animals) in partnership with local governments and VetTeks-USA</li>
+    <li>Reviewed Kenya Animal Welfare laws for a Parliamentary motion</li>
+  </ul>
+</div>
+
+<div class="cv-exp-card one-health">
+  <div class="cv-exp-header">
+    <div class="cv-exp-title">OHCEA One Health Workforce</div>
+    <div class="cv-exp-date">June – July 2017</div>
+  </div>
+  <div class="cv-exp-org">One Health East &amp; Central Africa / USAID · Kenya</div>
+  <ul>
+    <li>Community needs assessment and data collection among the Maasai Community in Loitokitok</li>
+    <li>Education on livestock production and zoonotic disease prevention for pastoral communities</li>
+  </ul>
+</div>
+
+<div class="cv-exp-card tech">
+  <div class="cv-exp-header">
+    <div class="cv-exp-title">Product Development Officer (Part-Time)</div>
+    <div class="cv-exp-date">May 2015 – Dec 2022</div>
+  </div>
+  <div class="cv-exp-org">Obulex Solutions Limited · Westlands, Nairobi</div>
+  <ul>
+    <li>Software development: Revenue Information Management System (RMIS) for Isiolo and Mombasa Counties</li>
+    <li>Contributed to Afya Poa Telemedicine App; graphics design and web development for clients</li>
+  </ul>
+</div>
+
+<!-- AWARDS -->
+<div class="cv-chip">🏆 Awards &amp; Fellowships</div>
+<div class="cv-awards-grid">
+  <div class="cv-award starred"><div class="cv-award-icon">🥇</div><div class="cv-award-text"><strong>Best Oral PhD Presentation</strong><br>ASAS Midwest Conference, USA · 2025</div></div>
+  <div class="cv-award starred"><div class="cv-award-icon">🐷</div><div class="cv-award-text"><strong>Real Pork Scholar 2025</strong><br>National Pork Board, USA</div></div>
+  <div class="cv-award starred"><div class="cv-award-icon">🌍</div><div class="cv-award-text"><strong>Mandela Washington Fellow</strong><br>YALI Program · 2023</div></div>
+  <div class="cv-award starred"><div class="cv-award-icon">🎓</div><div class="cv-award-text"><strong>Best Overall Student, DVM 2016/17</strong><br>University of Nairobi · With Distinction</div></div>
+  <div class="cv-award plain"><div class="cv-award-icon">✈️</div><div class="cv-award-text">DVM Exchange Program<br>Free University of Berlin, Germany · 2015</div></div>
+  <div class="cv-award plain"><div class="cv-award-icon">📚</div><div class="cv-award-text">PhD &amp; MSc Assistantship/Scholarship<br>Iowa State University · 2023</div></div>
+  <div class="cv-award plain"><div class="cv-award-icon">🔬</div><div class="cv-award-text">Undergraduate One Health Fellowship<br>University of Nairobi · 2012–2017</div></div>
+</div>
+
+<!-- GRANTS -->
+<div class="cv-chip">💰 Grant Funding</div>
+<p style="font-size:0.85rem; color:#5D6D7E; margin-bottom:0.8rem;">Awarded: <strong style="color:#1B4F72;">$110,000</strong> &nbsp;·&nbsp; Under Review: <strong style="color:#8E44AD;">$300,000</strong></p>
+<div class="cv-grants-row">
+  <div class="cv-grant-mini"><div class="funder">Pig Livability · Awarded</div><div class="amt">$30,000</div><p>Real-Time Surveillance System for Mortality in Wean-to-Finish Lots</p></div>
+  <div class="cv-grant-mini"><div class="funder">Pig Livability · Awarded</div><div class="amt">$30,000</div><p>Early Identification of High-Risk Piglets in Commercial Swine Systems</p></div>
+  <div class="cv-grant-mini"><div class="funder">ISU VPR · Awarded</div><div class="amt">$50,000</div><p>Precision Sow Management System (PSMS)</p></div>
+  <div class="cv-grant-mini pending"><div class="funder">USDA-CARE · Under Review</div><div class="amt">$300,000</div><p>Improving Breeding Herd Efficiency: Predictors of Sow Retention &amp; Profitability</p></div>
+</div>
+
+<!-- LEADERSHIP -->
+<div class="cv-chip">🤝 Leadership &amp; Engagement</div>
+<ul class="cv-lead-list">
+  <li><strong>Moderator</strong>, Weekly Swine Seminar — VetMed, Iowa State University (Dec 2025 – Present)</li>
+  <li><strong>IVSA Officer</strong>, Kenyan Chapter (Jan 2016 – Sep 2017)</li>
+  <li><strong>Assistant Secretary</strong>, One Health Club — University of Nairobi (March 2014 – May 2018)</li>
+  <li><strong>Member</strong>, Kenyan Animal Welfare Advocacy Network (Dec 2016 – May 2017)</li>
 </ul>
-</section>
+<div class="cv-memberships">
+  <strong style="color:#1B4F72;">Professional Memberships:</strong><br>
+  Association of American Swine Veterinarians (AASV) · American Society of Animal Science · Toxicology Society of Kenya · Kenya Small &amp; Companion Animal Veterinary Association · Kenya Veterinary Association · Kenya Society for the Protection and Care of Animals
+</div>
 
-<hr>
-
-<section id="professional-experience" class="level2">
-<h2>Professional Experience</h2>
-
-<p><strong>Data Analytics Research Assistant</strong> <code>Aug 2023 – Present</code><br>
-<em>Iowa State University | Ames, IA</em></p>
-<ul>
-<li>Precision Swine Management: Designing and implementing projects focused on developing algorithms to improve herd efficiency</li>
-<li>Data Analytics: Utilizing Python, R, and SAS for complex analysis of sow-level production data and sequenced data to develop benchmark performance dashboards and disease surveillance platforms</li>
-<li>Field Trials: Designing and executing field trials assessing the impact of vaccination programs</li>
-</ul>
-
-<p><strong>Veterinarian &amp; Research Manager</strong> <code>June 2018 – May 2023</code><br>
-<em>Stanley &amp; Son Limited | Salama, Kenya</em></p>
-<ul>
-<li>Data-Driven Production: Introduced production-guided research and data analysis to integrate evidence-based production efficiency, including feed quality testing and somatic cell count monitoring through a developed Farm Management System</li>
-<li>Antimicrobial Stewardship: Developed an antimicrobial surveillance platform, including a policy framework for antimicrobial use in animals and residues in milk, to ensure farm-level food safety</li>
-<li>Clinical &amp; Management: Managed all veterinary and animal husbandry requirements, including diagnosis, surgery, post-mortems, disease control programs, and staff supervision</li>
-</ul>
-
-<p><strong>Veterinary Intern</strong> <code>June 2017 – May 2018</code><br>
-<em>Africa Network for Animal Welfare | Nairobi, Kenya</em></p>
-<ul>
-<li>Attended wildlife veterinary emergencies, rescues, treatments, field surgeries, and desnaring in various National Parks and Conservancies</li>
-<li>Neutered ~330 animals in spay/neuter campaigns in partnership with local governments and VetTeks-USA</li>
-<li>Rabies control through vaccinations and spay/neuter programs</li>
-<li>Reviewed Animal Welfare laws in Kenya for consideration in a Parliamentary motion</li>
-</ul>
-
-<p><strong>OHCEA Workforce</strong> <code>June – July 2017</code><br>
-<em>One Health East and Central Africa / USAID | Kenya</em></p>
-<ul>
-<li>Executed demo site workforce on community needs assessment and data collection among the Maasai Community in Loitokitok, Kenya</li>
-<li>Educated the pastoral community on better livestock production methods and zoonotic diseases</li>
-<li>Developed a workforce guide model for use in various One Health demo sites</li>
-</ul>
-
-<p><strong>Product Development Officer (Part-Time)</strong> <code>May 2015 – Dec 2022</code><br>
-<em>Obulex Solutions Limited | Westlands, Nairobi</em></p>
-<ul>
-<li>Assisted in the development and testing of software including Revenue Information Management System (RMIS) for Isiolo and Mombasa Counties, and Afya Poa Telemedicine App</li>
-<li>Graphics design and website development for various clients</li>
-</ul>
-</section>
-
-<hr>
-
-<section id="awards" class="level2">
-<h2>Awards &amp; Fellowships</h2>
-<ul>
-<li><strong>Real Pork Scholar (2025)</strong> — National Pork Board, USA</li>
-<li><strong>Best Oral PhD Presentation</strong> — ASAS Midwest Conference, USA (2025)</li>
-<li><strong>Mandela Washington Fellow (MWF)</strong> (2023)</li>
-<li>MSc Fellowship/Scholarship, University of Nairobi (2017)</li>
-<li>MSc Scholarship, Iowa State University (2023)</li>
-<li>PhD Assistantship/Scholarship, Iowa State University (2023)</li>
-<li><strong>Best Overall Student</strong>, DVM Class of 2016/2017</li>
-<li>DVM Exchange Program Recipient, Free University of Berlin, Germany (2015)</li>
-<li>Undergraduate Fellowship, University of Nairobi: One Health Research Project (2012–2017)</li>
-</ul>
-</section>
-
-<hr>
-
-<section id="publications" class="level2">
-<h2>Peer-Reviewed Publications</h2>
-<ol>
-<li><strong>Kirwa, E.</strong>, Peterson, B., Grohmann, C. J., Silva, G. S., Ulguim, R. R., Mellagi, A. P., &amp; Frizzo, M. (2025). Assessment of the relationship between lactation feeding patterns, litter performance measures, and sow characteristics on sow farrowing efficiency metrics. <em>Journal of Animal Science</em>, 103(Supplement_1), 50–52. <a href="https://doi.org/10.1093/jas/skaf102.055">doi:10.1093/jas/skaf102.055</a></li>
-<li>Musskopf, M.; Peterson, T.; Machado, I.; Tran Pham Tien, T.; <strong>Kirwa, E.</strong>; et al. (2025). Assessment of the Relationship Between Bioexclusion Practices Applied in Wean-to-Harvest Sites and PRRS Outbreaks. <em>Vet. Sci.</em> 12, 1000. <a href="https://doi.org/10.3390/vetsci12101000">doi:10.3390/vetsci12101000</a></li>
-<li><strong>Kirwa E</strong>, Tangen J., Vargas L.B., Musskopf M., et al. (2025). Dynamics of PRRSV Seroconversion and immune-modulating properties of tilmicosin during naive gilt exposure to PRRS LVI.</li>
-<li><strong>Kirwa, E.</strong>, Aboge G. O., Maitho, T. E., Mbindyo, C. M., Abuom, T. O., &amp; Mainga, A. O. (2021). Antibiotic profile of <em>Staphylococcus aureus</em> and Coagulase negative <em>Staphylococci</em> from raw camel milk from Garissa County, Kenya. <em>East African Journal of Science, Technology and Innovation</em>, 2(4). <a href="https://doi.org/10.37425/eajsti.v2i4.364">doi:10.37425/eajsti.v2i4.364</a></li>
-<li>Bahati D., Makau D., <strong>Kirwa E.</strong> &amp; Mutura J. (2019). An assessment on community perspectives and views on natural resource management and its implications to biodiversity conservation. <a href="http://dx.doi.org/10.13140/RG.2.2.10344.34566">doi:10.13140/RG.2.2.10344.34566</a></li>
-</ol>
-</section>
-
-<hr>
-
-<section id="presentations" class="level2">
-<h2>Selected Presentations &amp; Abstracts</h2>
-<ol>
-<li><strong>Kirwa EK</strong>, et al. Predicting Farrowing Success to Inform Breeding Decisions in Commercial Swine Herds. <em>Symposium on AI in Veterinary Medicine</em>, Ithaca, NY. May 2026. Oral.</li>
-<li><strong>Kirwa EK</strong>, et al. Leveraging Machine Learning to Predict Subsequent Farrowing Success. <em>Society of Animal Science Midwest</em>, Omaha. March 2026. Oral.</li>
-<li><strong>Kirwa EK</strong>, et al. Factors associated with gilt retention in breeding herds. <em>Society of Animal Science</em>, Omaha. March 2026. Oral.</li>
-<li><strong>Kirwa EK</strong>, et al. Using Field Data to Identify Drivers of Gilt Retention and Lifetime Productivity. <em>The Robust Pig Seminar, PIC</em>. Feb 2026.</li>
-<li><strong>Kirwa EK</strong>, et al. Practical strategies to maximize sow efficiency. <em>National Hog Farmer</em>, 2025. <a href="https://www.nationalhogfarmer.com/livestock-management/practical-strategies-to-maximize-sow-efficiency">Link</a></li>
-<li><strong>Kirwa EK</strong>, et al. Linking lactation feeding patterns to sow efficiency metrics. <em>Benchmark Magazine</em>, Spring 2025, pp. 6–7. <a href="https://www.pigchamp.com/flipbooks/benchmark-magazine/2025/USA/4/index.html">Link</a></li>
-<li><strong>Kirwa EK</strong>, et al. Factors associated with gilt retention. <em>International Conference on Pig Livability</em>, Omaha. 2025. Oral.</li>
-<li><strong>Kirwa EK</strong>: One Health Concept — The Kenyan Perspective. <em>Mandela Washington Fellowship Conference</em>, Minneapolis. 2023.</li>
-<li><strong>Kirwa EK</strong>, et al. Phenotypic characterization of antimicrobial-resistant <em>S. aureus</em>. <em>ESCMID/ASM Conference</em>, Dublin. 2022. Poster.</li>
-<li><strong>Kirwa EK</strong>: How safe is our milk on the shelf? <em>Kenya One Health Conference</em>, ILRI, Kenya. 2021.</li>
-</ol>
-</section>
-
-<hr>
-
-<section id="grants" class="level2">
-<h2>Grant Funding</h2>
-<p><strong>Awarded</strong></p>
-<ul>
-<li>Silva, Portal, Rosero, <strong>Kirwa</strong>: Real-time surveillance system for mortality in wean-to-finish lots — <em>Pig Livability</em>: <strong>$30,000</strong></li>
-<li>Silva, Ulgium, <strong>Kirwa</strong>: Early Identification of High-Risk Piglets in Commercial Swine Systems — <em>Pig Livability</em>: <strong>$30,000</strong></li>
-<li>Silva, Linhares, Holtkamp, Rosero, Trevisan, Rupasinghe, <strong>Kirwa</strong>: Precision sow management system (PSMS) — <em>ISU VPR</em>: <strong>$50,000</strong></li>
-</ul>
-<p><strong>Under Review</strong></p>
-<ul>
-<li>Silva, Linhares, Holtkamp, Rosero, Trevisan, Rupasinghe, <strong>Kirwa</strong>: Improving breeding herd efficiency by unravelling predictors of sow retention, productivity and profitability — <em>USDA-CARE</em>: $300,000</li>
-</ul>
-</section>
-
-<hr>
-
-<section id="leadership" class="level2">
-<h2>Leadership &amp; Community Engagement</h2>
-<ul>
-<li><strong>Moderator</strong>, Weekly Swine Seminar — VetMed, Iowa State University (Dec 2025 – Present)</li>
-<li><strong>IVSA Officer</strong>, Kenyan Chapter (Jan 2016 – Sep 2017)</li>
-<li><strong>Assistant Secretary</strong>, One Health Club — University of Nairobi (March 2014 – May 2018)</li>
-<li><strong>Member</strong>, Kenyan Animal Welfare Advocacy Network (Dec 2016 – May 2017)</li>
-</ul>
-<p><strong>Professional Memberships:</strong> Association of American Swine Veterinarians (AASV) · American Society of Animal Science · Toxicology Society of Kenya · Kenya Small and Companion Animal Veterinary Association · Kenya Veterinary Association · Kenya Society for the Protection and Care of Animals</p>
-</section>
+<script>
+(function(){
+  const observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.querySelectorAll('.cv-skill-fill').forEach(function(bar){
+          bar.style.width = bar.dataset.w;
+        });
+        observer.unobserve(e.target);
+      }
+    });
+  },{threshold:0.3});
+  const grid = document.getElementById('cv-skill-bars');
+  if(grid) observer.observe(grid);
+})();
+</script>
 </main> <!-- /main -->
 <!-- Non-rendering template (won’t create any visible box at page bottom) -->
 <template id="theme-toggle-template">
