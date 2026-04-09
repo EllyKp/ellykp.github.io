@@ -36,7 +36,7 @@ Veterinary epidemiologist and data scientist with 5+ years of experience applyin
 
 ## Education
 
-**Ph.D. in Population Sciences in Animal Health** `Aug 2023 – March 2027 (Expected)`
+**Ph.D. in Population Sciences in Animal Health** `Aug 2023 – Spring 2027 (Expected)`
 Iowa State University (ISU), Ames, IA
 *Dissertation: "Applied Data Analytics for Breeding Herd Efficiency in Commercial Swine Production"*
 Graduate Certificate: Business Data Analytics (Jan 2026 – Dec 2026)
@@ -70,7 +70,7 @@ University of Nairobi, Nairobi, Kenya — *With Distinction*
 **Data Analytics Research Assistant** `Aug 2023 – Present`
 *Iowa State University | Ames, IA*
 
-- Precision Swine Management: Designing and implementing projects focused on developing algorithms to improve herd efficiency
+- Precision Swine Management: Designing and implementing projects focused on developing / applying algorithms to improve herd efficiency
 - Data Analytics: Utilizing Python, R, and SAS for complex analysis of sow-level production data and sequenced data to develop benchmark performance dashboards and disease surveillance platforms
 - Field Trials: Designing and executing field trials assessing the impact of vaccination programs
 
